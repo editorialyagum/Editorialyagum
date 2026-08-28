@@ -3,10 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editorial Yagum</title>
+    <meta name="description" content="Editorial Yagum - Sello editorial digital especializado en literatura académica, ciencia ficción, drama y suspenso.">
+    <meta name="author" content="Editorial Yagum">
+    <title>Editorial Yagum | Distribución Digital y Literatura</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tipografía moderna e híbrida (Geométrica para títulos, legible para textos) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Bienvenido a Editorial Yagum</h1>
-    <p>Sitio en construcción.</p>
+
+    <!-- Encabezado / Navegación -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="#">YAGUM<span>.</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#academia">Academia</a></li>
+                    <li><a href="#ficcion">Ficción</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Héroe / Presentación Principal -->
+    <section id="inicio" class="hero-section">
+        <div class="container hero-content">
+            <p class="hero-subtitle">Distribución Digital desde San Luis Potosí</p>
+            <h1 class="hero-title">El punto de encuentro entre el rigor académico y la ficción especulativa.</h1>
+            <p class="hero-text">Explora nuestro catálogo digital de investigación, ciencia ficción, drama y suspenso.</p>
+            <div class="hero-buttons">
+                <a href="#ficcion" class="btn btn-primary">Explorar Ficción</a>
+                <a href="#academia" class="btn btn-secondary">Catálogo Académico</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Academia -->
+    <section id="academia" class="catalog-section bg-dark-variant">
+        <div class="container">
+            <h2 class="section-title">Línea Académica</h2>
+            <p class="section-subtitle">Investigación, finanzas y conocimiento con rigor profesional.</p>
+            <div class="catalog-grid">
+                <!-- Tarjeta de libro ejemplo -->
+                <div class="book-card">
+                    <div class="book-cover">[Portada: Brújula Financiera]</div>
+                    <div class="book-info">
+                        <h3>Brújula Financiera</h3>
+                        <p class="author">Jesús Antonio Guerrero Medellín</p>
+                        <span class="badge">Finanzas / Academia</span>
+                        <p class="summary">El camino hacia la inteligencia financiera y el desarrollo profesional.</p>
+                        <a href="#" class="btn-link">Comprar en Amazon →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ficción -->
+    <section id="ficcion" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Ficción & Suspenso</h2>
+            <p class="section-subtitle">Narrativas digitales de ciencia ficción, drama profundo y misterio.</p>
+            <div class="catalog-grid">
+                <!-- Tarjeta de libro de ficción vacío por ahora -->
+                <div class="book-card blank-card">
+                    <div class="book-cover-placeholder">Próximo Lanzamiento</div>
+                    <div class="book-info">
+                        <h3>Título del Sello Sci-Fi</h3>
+                        <p class="author">Convocatoria Abierta</p>
+                        <span class="badge badge-scifi">Sci-Fi / Suspenso</span>
+                        <p class="summary">Historias diseñadas para desafiar la mente y los sentidos en formato ePub.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 Editorial Yagum. Todos los derechos reservados.</p>
+            <p>San Luis Potosí, México | Sello Editorial Independiente</p>
+        </div>
+    </footer>
+
 </body>
 </html>
