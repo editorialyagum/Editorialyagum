@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- primer versión agosto 31 2026-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Recepción | Editorial Yagum</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula tu archivo de estilos -->
+    <style>
+        .contenedor-contacto { max-width: 600px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; }
+        .titulo-seccion { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 25px; }
+        
+        /* Estilos elegantes para el formulario */
+        .grupo-formulario { margin-bottom: 20px; }
+        .grupo-formulario label { display: block; font-weight: bold; margin-bottom: 8px; color: #333; }
+        .grupo-formulario input, .grupo-formulario select, .grupo-formulario textarea { 
+            width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem;
+        }
+        .grupo-formulario textarea { resize: vertical; height: 150px; }
+        
+        /* Botón de envío profesional */
+        .btn-enviar { 
+            background-color: #2ecc71; color: white; padding: 14px 20px; border: none; border-radius: 4px; 
+            cursor: pointer; font-size: 1.1rem; font-weight: bold; width: 100%; transition: background 0.3s;
+        }
+        .btn-enviar:hover { background-color: #27ae60; }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación unificado -->
+    <header style="text-align: center; padding: 20px;">
+        <nav>
+            <a href="index.html">Inicio</a> | 
+            <a href="autores.html">Autores</a> | 
+            <a href="lineamientos.html">Lineamientos</a> | 
+            <a href="contacto.html" style="font-weight: bold;">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-contacto">
+        <h1 class="titulo-seccion">Contacto Editorial</h1>
+        <p>¿Eres escritor y quieres enviar tu propuesta? O ¿buscas colaborar con nosotros? Llena el siguiente formulario institucional.</p>
+
+        <!-- El atributo 'netlify' activa el servidor automático de Netlify de forma invisible -->
+        <form name="contacto-editorial" method="POST" netlify>
+            
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre Completo o de Portada:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel García" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="correo">Correo Electrónico de Contacto:</label>
+                <input type="email" id="correo" name="correo" placeholder="autor@ejemplo.com" required>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="asunto">Motivo de tu Mensaje:</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="manuscrito">Envío de Manuscrito / Propuesta Editorial</option>
+                    <option value="prensa">Prensa y Medios</option>
+                    <option value="duelo-ajuste">Duda sobre Contratos o Regalías</option>
+                    <option value="otro">Otro Asunto Comercial</option>
+                </select>
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="mensaje">Sinopsis de tu Obra o Detalles del Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí un resumen de tu propuesta editorial..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensaje Institucional</button>
+        </form>
+    </main>
+
+</body>
+</html>
