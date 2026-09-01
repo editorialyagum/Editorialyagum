@@ -43,36 +43,44 @@
         <p>¿Eres escritor y quieres enviar tu propuesta? O ¿buscas colaborar con nosotros? Llena el siguiente formulario institucional.</p>
 
         <!-- El atributo 'netlify' activa el servidor automático de Netlify de forma invisible -->
-        <form name="contacto-editorial" method="POST" netlify>
-            
-            <div class="grupo-formulario">
-                <label for="nombre">Nombre Completo o de Portada:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel García" required>
-            </div>
+        <!-- REEMPLAZA EL FORMULARIO DE CONTACTO.HTML POR ESTE SI DESEAS RECIBIR ARCHIVOS -->
+<!-- El parámetro 'enctype' es obligatorio para que Netlify acepte archivos adjuntos -->
+<form name="contacto-editorial" method="POST" enctype="multipart/form-data" netlify>
+    
+    <div class="grupo-formulario">
+        <label for="nombre">Nombre Completo o de Portada:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel García" required>
+    </div>
 
-            <div class="grupo-formulario">
-                <label for="correo">Correo Electrónico de Contacto:</label>
-                <input type="email" id="correo" name="correo" placeholder="autor@ejemplo.com" required>
-            </div>
+    <div class="grupo-formulario">
+        <label for="correo">Correo Electrónico de Contacto:</label>
+        <input type="email" id="correo" name="correo" placeholder="autor@ejemplo.com" required>
+    </div>
 
-            <div class="grupo-formulario">
-                <label for="asunto">Motivo de tu Mensaje:</label>
-                <select id="asunto" name="asunto" required>
-                    <option value="">-- Selecciona una opción --</option>
-                    <option value="manuscrito">Envío de Manuscrito / Propuesta Editorial</option>
-                    <option value="prensa">Prensa y Medios</option>
-                    <option value="duelo-ajuste">Duda sobre Contratos o Regalías</option>
-                    <option value="otro">Otro Asunto Comercial</option>
-                </select>
-            </div>
+    <div class="grupo-formulario">
+        <label for="asunto">Motivo de tu Mensaje:</label>
+        <select id="asunto" name="asunto" required>
+            <option value="">-- Selecciona una opción --</option>
+            <option value="manuscrito">Envío de Manuscrito / Propuesta Editorial</option>
+            <option value="prensa">Prensa y Medios</option>
+            <option value="otro">Otro Asunto Comercial</option>
+        </select>
+    </div>
 
-            <div class="grupo-formulario">
-                <label for="mensaje">Sinopsis de tu Obra o Detalles del Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí un resumen de tu propuesta editorial..." required></textarea>
-            </div>
+    <!-- ESTA ES LA NUEVA CASILLA PARA ADJUNTAR EL MANUSCRITO -->
+    <div class="grupo-formulario">
+        <label for="manuscrito">Adjuntar Manuscrito (Formatos permitidos: PDF o Word):</label>
+        <input type="file" id="manuscrito" name="manuscrito" accept=".pdf,.docx,.doc,.txt" required>
+    </div>
 
-            <button type="submit" class="btn-enviar">Enviar Mensaje Institucional</button>
-        </form>
+    <div class="grupo-formulario">
+        <label for="mensaje">Sinopsis de tu Obra o Detalles del Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí un breve resumen de tu propuesta..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar Mensaje e Iniciar Evaluación</button>
+</form>
+        
     </main>
 
 </body>
