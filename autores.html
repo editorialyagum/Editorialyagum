@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Autores | Editorial Yagum</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula aquí tu archivo CSS actual -->
+    <style>
+        /* Estilos básicos para mantener la lista impecable y elegante */
+        .contenedor-autores { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; }
+        .titulo-seccion { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px; }
+        
+        /* Formato de la lista desplegable */
+        details { background: #f9f9f9; padding: 15px; margin-bottom: 15px; border-radius: 5px; border-left: 5px solid #2ecc71; transition: all 0.3s ease; }
+        summary { font-size: 1.2rem; font-weight: bold; cursor: pointer; list-style: none; outline: none; }
+        summary::before { content: "📁 "; margin-right: 10px; }
+        details[open] summary::before { content: "📂 "; }
+        details[open] { background: #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+
+        /* Contenido oculto del autor que se muestra al dar clic */
+        .ficha-autor { padding-top: 15px; margin-top: 10px; border-top: 1px dashed #ddd; line-height: 1.6; }
+        .redes-autor a { display: inline-block; margin-right: 15px; color: #3498db; text-decoration: none; font-weight: bold; }
+        .redes-autor a:hover { text-decoration: underline; }
+        .bibliografia { background: #f5f5f5; padding: 10px 15px; border-radius: 4px; margin-top: 10px; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación (colócalo en todas tus páginas secundarias para que el usuario regrese) -->
+    <header style="text-align: center; padding: 20px;">
+        <nav>
+            <a href="index.html">Inicio</a> | 
+            <a href="autores.html" style="font-weight: bold;">Autores</a> | 
+            <a href="lineamientos.html">Lineamientos</a> | 
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-autores">
+        <h1 class="titulo-seccion">Catálogo de Autores</h1>
+        <p>Selecciona el nombre de un autor para desplegar su biografía, obras destacadas y redes de contacto.</p>
+
+        <!-- AUTOR 1 -->
+        <details>
+            <summary>Gabriel García Márquez (Nombre en Portada)</summary>
+            <div class="ficha-autor">
+                <h3>Biografía</h3>
+                <p>Escritor, periodista y guionista colombiano. Uno de los máximos exponentes del realismo mágico y ganador del Premio Nobel de Literatura.</p>
+                
+                <h3>Bibliografía en la Editorial</h3>
+                <div class="bibliografia">
+                    <ul>
+                        <li>Cien años de soledad (2026 - Edición Conmemorativa)</li>
+                        <li>El coronel no tiene quien le escriba (2026)</li>
+                    </ul>
+                </div>
+
+                <h3>Redes Sociales y Contacto</h3>
+                <p class="redes-autor">
+                    <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+                    <a href="https://twitter.com" target="_blank">🐦 X / Twitter</a>
+                    <a href="mailto:autor1@correo.com">✉️ Correo Electrónico</a>
+                </p>
+            </div>
+        </details>
+
+        <!-- AUTOR 2 (Duplica este bloque para agregar más autores fácilmente) -->
+        <details>
+            <summary>Isabel Allende</summary>
+            <div class="ficha-autor">
+                <h3>Biografía</h3>
+                <p>Escritora chilena, considerada la escritora viva de lengua española más leída del mundo. Miembro de la Academia Estadounidense de las Artes y las Letras.</p>
+                
+                <h3>Bibliografía en la Editorial</h3>
+                <div class="bibliografia">
+                    <ul>
+                        <li>La casa de los espíritus (Edición Revisada)</li>
+                    </ul>
+                </div>
+
+                <h3>Redes Sociales y Contacto</h3>
+                <p class="redes-autor">
+                    <a href="https://facebook.com" target="_blank">👥 Facebook</a>
+                    <a href="mailto:autor2@correo.com">✉️ Correo Electrónico</a>
+                </p>
+            </div>
+        </details>
+
+    </main>
+
+</body>
+</html>
