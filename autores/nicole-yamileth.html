@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole Yamileth | Catálogo Editorial Yagum</title>
+    <!-- Ruta absoluta para heredar los estilos de la editorial -->
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+
+    <!-- EL GANCHO CENTRAL: Aquí tu 'menu.js' inyectará la navegación idéntica -->
+    <div id="navegacion-principal"></div>
+
+    <!-- EL ESCAPARATE DE LA AUTORA -->
+    <main style="max-width: 700px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; line-height: 1.7;">
+        <div style="border-bottom: 3px solid #2c3e50; padding-bottom: 15px; margin-bottom: 25px;">
+            <h1>Nicole Yamileth</h1>
+            <p><em>Sello Poesía y Ensayo Académico</em></p>
+        </div>
+
+        <p style="font-size: 1.1rem; color: #444; margin-bottom: 30px;">
+            Autora enfocada en la exploración lírica contemporánea y el ensayo crítico. Sus textos abordan las complejidades emocionales y de identidad en la era digital con una voz profunda y vanguardista.
+        </p>
+
+        <h2>Obras Disponibles</h2>
+
+        <!-- LIBRO DE PRUEBA -->
+        <div style="background: #f9f9f9; border: 1px solid #e0e0e0; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
+            <h3 style="margin-top: 0; color: #2c3e50;">📖 Silencios de Tinta (2026)</h3>
+            <p>Una antología poética que transita por la nostalgia, el desamor y la reconstrucción personal. Una obra imprescindible para los amantes de la lírica moderna.</p>
+            
+            <div style="margin-top: 15px;">
+                <a href="https://amazon.com.mx" target="_blank" style="background-color: #f39c12; color: #111; padding: 10px 15px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block;">🛒 Adquirir en Amazon</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- LA LLAMADA AL MOTOR: Carga el menú dinámico desde la raíz -->
+    <script src="/menu.js"></script>
+</body>
+</html>
