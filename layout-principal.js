@@ -1,4 +1,4 @@
-// Motor de Diseño Principal - Editorial Yagum (Versión Evolucionada con Submenús)
+// Motor de Diseño Principal - Editorial Yagum (Menú Evolucionado con Submenús)
 document.addEventListener("DOMContentLoaded", function() {
     const contenedorHeader = document.getElementById("header-corporativo");
     
