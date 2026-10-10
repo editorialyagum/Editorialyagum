@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
                             </ul>
                         </li>
                         
-                        <li><a href="autores.html">Autores</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="5autores.html">Autores</a></li>
+                        <li><a href="4contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
             </header>
