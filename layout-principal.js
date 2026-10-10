@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 <nav class="nav-corporativo-dinamico">
                     <ul>
-                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         
                         <!-- MENÚ DESPLEGABLE: LECTORES -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Lectores ▾</a>
                             <ul class="submenu">
-                                <li><a href="/lectores/literatos.html">📚 Catálogo Literario</a></li>
-                                <li><a href="/lectores/academicos.html">🎓 Catálogo Académico</a></li>
+                                <li><a href="lectores/literatos.html">📚 Catálogo Literario</a></li>
+                                <li><a href="lectores/academicos.html">🎓 Catálogo Académico</a></li>
                             </ul>
                         </li>
                         
@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Escritores ▾</a>
                             <ul class="submenu">
-                                <li><a href="/escritores/convocatorias.html">📢 Convocatorias</a></li>
-                                <li><a href="/escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
+                                <li><a href="escritores/convocatorias.html">📢 Convocatorias</a></li>
+                                <li><a href="escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
                             </ul>
                         </li>
                         
-                        <li><a href="/autores.html">Autores</a></li>
-                        <li><a href="/contacto.html">Contacto</a></li>
-                        <li><a href="/banco_de_pruebas.html" class="enlace-starter">Starter</a></li>
+                        <li><a href="autores.html">Autores</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="banco_de_pruebas.html" class="enlace-starter">Starter</a></li>
                     </ul>
                 </nav>
             </header>
