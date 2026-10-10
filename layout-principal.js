@@ -1,4 +1,4 @@
-// Motor de Diseño Principal - Editorial Yagum (Menú Evolucionado con Submenús)
+// Motor de Diseño Principal - Editorial Yagum (Versión Interactiva para Móviles)
 document.addEventListener("DOMContentLoaded", function() {
     const contenedorHeader = document.getElementById("header-corporativo");
     
@@ -39,5 +39,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 </nav>
             </header>
         `;
+
+        // --- PROGRAMACIÓN PARA PANTALLAS TÁCTILES (MÓVILES) ---
+        // Buscamos todos los menús que tienen submenús adentro
+        const elementosDesplegables = document.querySelectorAll(".menu-desplegable");
+
+        elementosDesplegables.forEach(function(item) {
+            const botonDisparador = item.querySelector(".trigger-desplegable");
+
+            botonDisparador.addEventListener("click", function(evento) {
+                // Evitamos que la pantalla salte o recargue al presionar el '#'
+                evento.preventDefault(); 
+                
+                // Buscamos el submenú específico de este botón
+                const submenuInterno = item.querySelector(".submenu");
+
+                // Verificamos si este submenú ya está abierto
+                const estaAbierto = submenuInterno.style.display === "flex";
+
+                // Primero cerramos CUALQUIER otro submenú que esté abierto para que no se empalmen
+                document.querySelectorAll(".submenu").forEach(function(sub) {
+                    sub.style.display = "none";
+                });
+
+                // Si estaba cerrado, lo abrimos. Si estaba abierto, se queda cerrado.
+                if (!estaAbierto) {
+                    submenuInterno.style.display = "flex";
+                }
+            });
+        });
+
+        // Cerrar los menús automáticamente si el usuario hace clic en cualquier otra parte de la pantalla
+        document.addEventListener("click", function(evento) {
+            if (!evento.target.closest(".menu-desplegable")) {
+                document.querySelectorAll(".submenu").forEach(function(sub) {
+                    sub.style.display = "none";
+                });
+            }
+        });
     }
 });
