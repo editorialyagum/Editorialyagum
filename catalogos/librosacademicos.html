@@ -30,7 +30,43 @@
         
         <!-- ÁREA DE EXPERIMENTACIÓN / CONTENIDO -->
         <div class="zona-contenido">
-            <p>Aquí es donde puedes empezar a escribir el texto de tus lineamientos, bases, o meter las tarjetas de tus libros a tu antojo...</p>
+            <!-- Cuadrícula inteligente de libros -->
+<div class="catalog-grid">
+
+    <!-- TARJETA DEL LIBRO 1: BRÚJULA FINANCIERA -->
+    <article class="book-card">
+        <!-- Espacio para la portada física del libro (puedes meter una etiqueta <img> aquí más adelante) -->
+        <div class="book-cover">
+            <span>[ Portada: Brújula Financiera ]</span>
+        </div>
+        
+        <div class="book-info">
+            <span class="badge">Finanzas / Academia</span>
+            <h3>Brújula Financiera</h3>
+            <p class="author">Jesús Antonio Guerrero Medellín</p>
+            <p class="summary">El camino definitivo hacia la inteligencia financiera, el desarrollo profesional y el rigor metodológico en la economía moderna.</p>
+            
+            <!-- Botones de Pasarelas de Pago Externas Obligatoriamente Blancos -->
+            <div class="dashboard-buttons-container" style="margin-top: 15px; gap: 10px;">
+                <a href="https://amazon.com" target="_blank" class="btn-dashboard btn-academico" style="padding: 10px 15px; min-width: 100%; font-size: 0.9rem;">Comprar en Amazon →</a>
+                <a href="https://mercadolibre.com" target="_blank" class="btn-dashboard btn-literario" style="padding: 10px 15px; min-width: 100%; font-size: 0.9rem; background-color: #2e3545;">Mercado Libre →</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- TARJETA DEL LIBRO 2: ESPACIO PARA TU PRÓXIMO EJEMPLAR ACADÉMICO -->
+    <article class="book-card blank-card">
+        <div class="book-cover-placeholder">Próximo Lanzamiento</div>
+        <div class="book-info">
+            <span class="badge" style="background-color: rgba(255,255,255,0.05); color: var(--text-muted);">Investigación</span>
+            <h3>Título en Evaluación</h3>
+            <p class="author">Sello Editorial Yagum</p>
+            <p class="summary">Espacio reservado para las próximas publicaciones científicas y ensayos indexados de nuestra convocatoria activa.</p>
+        </div>
+    </article>
+
+</div>
+            
         </div>
 
     </main>
