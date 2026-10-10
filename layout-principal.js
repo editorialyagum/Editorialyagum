@@ -1,8 +1,17 @@
-// Motor de Diseño Principal - Editorial Yagum (Versión Interactiva para Móviles)
+// Motor de Diseño Principal - Editorial Yagum (Rutas Corregidas para GitHub Pages)
 document.addEventListener("DOMContentLoaded", function() {
     const contenedorHeader = document.getElementById("header-corporativo");
     
     if (contenedorHeader) {
+        // Detectamos si la página actual está DENTRO de una carpeta (catalogos, escritores, autores, nosotros)
+        // Si la URL contiene el nombre de alguna carpeta, necesitamos agregar "../" para que los enlaces no se rompan
+        const enSubcarpeta = window.location.pathname.includes("/catalogos/") || 
+                             window.location.pathname.includes("/escritores/") || 
+                             window.location.pathname.includes("/autores/") || 
+                             window.location.pathname.includes("/nosotros/");
+        
+        const prefijo = enSubcarpeta ? "../" : "./";
+
         contenedorHeader.innerHTML = `
             <header class="header-corporativo-dinamico">
                 <div class="header-branding">
@@ -12,14 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 <nav class="nav-corporativo-dinamico">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="${prefijo}index.html">Inicio</a></li>
                         
                         <!-- MENÚ DESPLEGABLE: LECTORES -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Lectores ▾</a>
                             <ul class="submenu">
-                                <li><a href="lectores/literatos.html">📚 Catálogo de libros Literario</a></li>
-                                <li><a href="catalogos/libros_academicos.html">🎓 Catálogo de libros Académico</a></li>
+                                <li><a href="${prefijo}catalogos/libros_literatos.html">📚 Catálogo Literario</a></li>
+                                <li><a href="${prefijo}catalogos/libros_academicos.html">🎓 Catálogo Académico</a></li>
                             </ul>
                         </li>
                         
@@ -27,48 +36,40 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Escritores ▾</a>
                             <ul class="submenu">
-                                <li><a href="escritores/convocatorias.html">📢 Convocatorias</a></li>
-                                <li><a href="escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
+                                <li><a href="${prefijo}escritores/convocatorias.html">📢 Convocatorias</a></li>
+                                <li><a href="${prefijo}escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
                             </ul>
                         </li>
                         
-                        <li><a href="5autores.html">Autores</a></li>
-                        <li><a href="4contacto.html">Contacto</a></li>
+                        <li><a href="${prefijo}autores.html">Autores</a></li>
+                        <li><a href="${prefijo}nosotros.html">Nosotros</a></li>
+                        <li><a href="${prefijo}banco_de_pruebas.html" class="enlace-starter">Starter</a></li>
                     </ul>
                 </nav>
             </header>
         `;
 
-        // --- PROGRAMACIÓN PARA PANTALLAS TÁCTILES (MÓVILES) ---
-        // Buscamos todos los menús que tienen submenús adentro
+        // --- INTERACTIVIDAD PARA MÓVILES (PANTALLAS TÁCTILES) ---
         const elementosDesplegables = document.querySelectorAll(".menu-desplegable");
 
         elementosDesplegables.forEach(function(item) {
             const botonDisparador = item.querySelector(".trigger-desplegable");
 
             botonDisparador.addEventListener("click", function(evento) {
-                // Evitamos que la pantalla salte o recargue al presionar el '#'
                 evento.preventDefault(); 
-                
-                // Buscamos el submenú específico de este botón
                 const submenuInterno = item.querySelector(".submenu");
-
-                // Verificamos si este submenú ya está abierto
                 const estaAbierto = submenuInterno.style.display === "flex";
 
-                // Primero cerramos CUALQUIER otro submenú que esté abierto para que no se empalmen
                 document.querySelectorAll(".submenu").forEach(function(sub) {
                     sub.style.display = "none";
                 });
 
-                // Si estaba cerrado, lo abrimos. Si estaba abierto, se queda cerrado.
                 if (!estaAbierto) {
                     submenuInterno.style.display = "flex";
                 }
             });
         });
 
-        // Cerrar los menús automáticamente si el usuario hace clic en cualquier otra parte de la pantalla
         document.addEventListener("click", function(evento) {
             if (!evento.target.closest(".menu-desplegable")) {
                 document.querySelectorAll(".submenu").forEach(function(sub) {
