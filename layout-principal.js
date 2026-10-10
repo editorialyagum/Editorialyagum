@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <a href="#" class="trigger-desplegable">Lectores ▾</a>
                             <ul class="submenu">
                                 <li><a href="lectores/literatos.html">📚 Catálogo de libros Literario</a></li>
-                                <li><a href="catalogo/libros_academicos.html">🎓 Catálogo de libros Académico</a></li>
+                                <li><a href="catalogos/libros_academicos.html">🎓 Catálogo de libros Académico</a></li>
                             </ul>
                         </li>
                         
