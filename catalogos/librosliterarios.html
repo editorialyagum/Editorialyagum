@@ -1,1 +1,51 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cambia este título según la página (ej: Catálogo Académico | Editorial Yagum) -->
+    <title>Nombre de la Página | Editorial Yagum</title>
+    
+    <!-- CONEXIÓN AL CSS GENERAL -->
+    <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./style.css" -->
+    <!-- NOTA: Si el archivo está DENTRO de una carpeta (como lectores/), usa "../style.css" -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Tipografía corporativa -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- El script inyectará aquí de forma automática el menú superior con sus submenús -->
+    <div id="header-corporativo"></div>
+
+    <!-- CUERPO PRINCIPAL DE LA PÁGINA (Aquí va tu contenido exclusivo) -->
+    <main class="container" style="padding-top: 40px;">
+        
+        <!-- Encabezado de la sección -->
+        <h2 class="section-title">Título de esta sección</h2>
+        <p class="section-subtitle">Breve subtítulo informativo o explicativo para guiar al usuario.</p>
+        
+        <!-- ÁREA DE EXPERIMENTACIÓN / CONTENIDO -->
+        <div class="zona-contenido">
+            <p>Aquí es donde puedes empezar a escribir el texto de tus lineamientos, bases, o meter las tarjetas de tus libros a tu antojo...</p>
+        </div>
+
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 Editorial Yagum. Todos los derechos reservados.</p>
+            <p>San Luis Potosí, México | Sello Editorial Independiente</p>
+        </div>
+    </footer>
+
+    <!-- CONEXIÓN AL SCRIPT DINÁMICO -->
+    <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./layout-principal.js" -->
+    <!-- NOTA: Si el archivo está DENTRO de una carpeta (como escritores/), usa "../layout-principal.js" -->
+    <script src="./layout-principal.js"></script>
+</body>
+</html>
