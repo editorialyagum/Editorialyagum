@@ -1,11 +1,11 @@
-// Motor de Diseño Principal - Editorial Yagum (Rutas Absolutas Permanentes para GitHub Pages)
+// Motor de Diseño Principal - Editorial Yagum (Rutas Oficiales para GitHub Pages)
 document.addEventListener("DOMContentLoaded", function() {
     const contenedorHeader = document.getElementById("header-corporativo");
     
     if (contenedorHeader) {
-        // DEFINIMOS LA RUTA BASE OFICIAL DE TU PROYECTO EN GITHUB PAGES
-        // Esta es la raíz de tu servidor. Con esto evitamos usar "./" o "../" que confunden al navegador.
-        const URL_BASE = "https://github.io";
+        // TU RUTA BASE PERMANENTE EN INTERNET
+        // Al llevar la "/" al final, garantizamos que los archivos se enlacen de forma limpia
+        const URL_BASE = "https://editorialyagum.github.io/Editorialyagum/";
 
         contenedorHeader.innerHTML = `
             <header class="header-corporativo-dinamico">
@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 <nav class="nav-corporativo-dinamico">
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="${URL_BASE}index.html">Inicio</a></li>
                         
                         <!-- MENÚ DESPLEGABLE: LECTORES -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Lectores ▾</a>
                             <ul class="submenu">
-                                <li><a href="catalogos/libros_literatos.html">📚 Catálogo Literario</a></li>
-                                <li><a href="catalogos/libros_academicos.html">🎓 Catálogo Académico</a></li>
+                                <li><a href="${URL_BASE}catalogos/libros_literatos.html">📚 Catálogo Literario</a></li>
+                                <li><a href="${URL_BASE}catalogos/libros_academicos.html">🎓 Catálogo Académico</a></li>
                             </ul>
                         </li>
                         
@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Escritores ▾</a>
                             <ul class="submenu">
-                                <li><a href="escritores/convocatorias.html">📢 Convocatorias</a></li>
-                                <li><a href="escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
+                                <li><a href="${URL_BASE}escritores/convocatorias.html">📢 Convocatorias</a></li>
+                                <li><a href="${URL_BASE}escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
                             </ul>
                         </li>
                         
-                        <li><a href="autores.html">Autores</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="${URL_BASE}autores.html">Autores</a></li>
+                        <li><a href="${URL_BASE}nosotros.html">Nosotros</a></li>
                     </ul>
                 </nav>
             </header>
