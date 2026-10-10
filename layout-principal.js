@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                         <li><a href="${URL_BASE}autores.html">Autores</a></li>
                         <li><a href="${URL_BASE}nosotros.html">Nosotros</a></li>
+                        <li><a href="${URL_BASE}contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
             </header>
