@@ -1,16 +1,249 @@
 /* ==========================================================================
-   NUEVOS ESTILOS PARA EL MENÚ DINÁMICO Y DESPLEGABLES (DROPDOWNS)
+   VARIABLES DE DISEÑO Y PALETA DE COLORES
    ========================================================================== */
+:root {
+    --bg-dark: #0f1115;        /* Fondo principal (Oscuro profundo / Tecnológico) */
+    --bg-card: #171a21;        /* Fondo de tarjetas de libros */
+    --bg-light: #1f242e;       /* Variante para secciones */
+    --text-main: #f3f4f6;      /* Texto principal brillante */
+    --text-muted: #9ca3af;     /* Texto secundario / gris */
+    --accent: #3b82f6;         /* Azul digital (Seguridad académica y Sci-Fi) */
+    --accent-scifi: #a855f7;   /* Morado/Neón para la línea de ficción */
+    --font-base: system-ui, -apple-system, sans-serif;
+}
 
-/* --- Contenedor Corporativo Superior (Inyectado por JS) --- */
+/* --- Reseteo Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-base);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    background: linear-gradient(135deg, #0f1115 0%, #151922 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* --- Botones --- */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+/* --- Secciones de Catálogo --- */
+.catalog-section {
+    padding: 60px 0;
+}
+
+.bg-dark-variant {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- Tarjetas de Libros --- */
+.book-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.book-cover, .book-cover-placeholder {
+    height: 380px;
+    background-color: #2e3545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.book-cover-placeholder {
+    background: repeating-linear-gradient(45deg, #171a21, #171a21 10px, #1f242e 10px, #1f242e 20px);
+}
+
+.book-info {
+    padding: 25px;
+}
+
+.book-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.book-info .author {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.badge-scifi {
+    background-color: rgba(168, 85, 247, 0.1);
+    color: var(--accent-scifi);
+}
+
+.book-info .summary {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+.main-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-dark);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* ==========================================================================
+   ESTILOS PARA EL MENÚ DINÁMICO Y DESPLEGABLES (DROPDOWNS)
+   ========================================================================== */
 .header-corporativo-dinamico {
     background-color: var(--bg-dark);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 30px 0 20px 0;
     text-align: center;
-    font-family: system-ui, -apple-system, sans-serif; /* <-- Corregido de forma limpia */
+    font-family: var(--font-base);
 }
-
 
 .header-branding h1 {
     font-size: 2.2rem;
@@ -28,7 +261,6 @@
     font-weight: 300;
 }
 
-/* --- Ajustes a la Barra de Navegación del Script --- */
 .nav-corporativo-dinamico {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 15px;
@@ -57,7 +289,6 @@
     color: var(--text-main);
 }
 
-/* Enlace Starter resaltado en color Ficción (Morado Neón) */
 .nav-corporativo-dinamico .enlace-starter {
     color: var(--accent-scifi);
 }
@@ -66,16 +297,15 @@
     text-shadow: 0 0 8px var(--accent-scifi);
 }
 
-/* --- Lógica Física de los Desplegables --- */
+/* Lógica Física de los Desplegables */
 .menu-desplegable {
-    position: relative; /* Funciona como ancla para posicionar el submenú */
+    position: relative;
 }
 
 .menu-desplegable .trigger-desplegable {
     cursor: pointer;
 }
 
-/* Submenú Oculto por Defecto */
 .menu-desplegable .submenu {
     display: none; 
     position: absolute;
@@ -94,7 +324,6 @@
     margin-top: 10px;
 }
 
-/* Flecha decorativa superior para el submenú */
 .menu-desplegable .submenu::before {
     content: '';
     position: absolute;
@@ -117,18 +346,15 @@
     font-weight: 500;
     text-align: left;
     color: var(--text-muted);
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Cambio de color dentro de las opciones flotantes */
 .menu-desplegable .submenu a:hover {
     background-color: var(--bg-light);
     color: var(--text-main);
 }
 
-/* --- LA MAGIA: Mostrar al pasar el cursor --- */
 .menu-desplegable:hover .submenu {
-    display: flex; /* Cambia de 'none' a 'flex' al poner el ratón encima */
+    display: flex;
 }
 
 /* --- Ajuste Responsivo Móvil --- */
@@ -144,5 +370,8 @@
         border: none;
         background-color: rgba(255, 255, 255, 0.02);
         margin-top: 5px;
+    }
+    .menu-desplegable:hover .submenu {
+        display: flex;
     }
 }
