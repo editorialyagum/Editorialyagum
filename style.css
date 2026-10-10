@@ -374,4 +374,59 @@ body {
     .menu-desplegable:hover .submenu {
         display: flex;
     }
+
+   /* ==========================================================================
+   DISEÑO DE BOTONES CUADRADOS DE CATÁLOGO (TEXTO SIEMPRE BLANCO)
+   ========================================================================== */
+
+/* Contenedor para alinear los botones uno al lado del otro */
+.dashboard-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Se acomoda en celulares automáticamente */
+}
+
+/* Estilo base del botón cuadrado */
+.btn-dashboard {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none; /* Elimina el subrayado de enlace */
+    border-radius: 6px; /* Bordes ligeramente suavizados, estilo cuadrado moderno */
+    transition: all 0.3s ease;
+    min-width: 220px;
+    text-align: center;
+}
+
+/* --- REGLA DE ORO: Forzar color blanco en cualquier estado del enlace --- */
+.btn-dashboard, 
+.btn-dashboard:link, 
+.btn-dashboard:visited, 
+.btn-dashboard:active {
+    color: #ffffff !important; /* Blanco brillante garantizado */
+}
+
+/* Color personalizado para el botón Literario (Tono vino de la editorial) */
+.btn-literario {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-literario:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px); /* Pequeña animación al pasar el dedo/ratón */
+}
+
+/* Color personalizado para el botón Académico (Azul tecnológico) */
+.btn-academico {
+    background-color: #1e293b; /* Color pizarra oscuro a juego con tu paleta */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-academico:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
+   
 }
