@@ -1,16 +1,11 @@
-// Motor de Diseño Principal - Editorial Yagum (Rutas Corregidas para GitHub Pages)
+// Motor de Diseño Principal - Editorial Yagum (Rutas Absolutas Permanentes para GitHub Pages)
 document.addEventListener("DOMContentLoaded", function() {
     const contenedorHeader = document.getElementById("header-corporativo");
     
     if (contenedorHeader) {
-        // Detectamos si la página actual está DENTRO de una carpeta (catalogos, escritores, autores, nosotros)
-        // Si la URL contiene el nombre de alguna carpeta, necesitamos agregar "../" para que los enlaces no se rompan
-        const enSubcarpeta = window.location.pathname.includes("/catalogos/") || 
-                             window.location.pathname.includes("/escritores/") || 
-                             window.location.pathname.includes("/autores/") || 
-                             window.location.pathname.includes("/nosotros/");
-        
-        const prefijo = enSubcarpeta ? "../" : "./";
+        // DEFINIMOS LA RUTA BASE OFICIAL DE TU PROYECTO EN GITHUB PAGES
+        // Esta es la raíz de tu servidor. Con esto evitamos usar "./" o "../" que confunden al navegador.
+        const URL_BASE = "https://github.io";
 
         contenedorHeader.innerHTML = `
             <header class="header-corporativo-dinamico">
@@ -21,14 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 <nav class="nav-corporativo-dinamico">
                     <ul>
-                        <li><a href="${prefijo}index.html">Inicio</a></li>
+                        <li><a href="${URL_BASE}index.html">Inicio</a></li>
                         
                         <!-- MENÚ DESPLEGABLE: LECTORES -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Lectores ▾</a>
                             <ul class="submenu">
-                                <li><a href="${prefijo}catalogos/libros_literatos.html">📚 Catálogo Literario</a></li>
-                                <li><a href="${prefijo}catalogos/libros_academicos.html">🎓 Catálogo Académico</a></li>
+                                <li><a href="${URL_BASE}catalogos/libros_literatos.html">📚 Catálogo Literario</a></li>
+                                <li><a href="${URL_BASE}catalogos/libros_academicos.html">🎓 Catálogo Académico</a></li>
                             </ul>
                         </li>
                         
@@ -36,14 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Escritores ▾</a>
                             <ul class="submenu">
-                                <li><a href="${prefijo}escritores/convocatorias.html">📢 Convocatorias</a></li>
-                                <li><a href="${prefijo}escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
+                                <li><a href="${URL_BASE}escritores/convocatorias.html">📢 Convocatorias</a></li>
+                                <li><a href="${URL_BASE}escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
                             </ul>
                         </li>
                         
-                        <li><a href="${prefijo}autores.html">Autores</a></li>
-                        <li><a href="${prefijo}nosotros.html">Nosotros</a></li>
-                        <li><a href="${prefijo}banco_de_pruebas.html" class="enlace-starter">Starter</a></li>
+                        <li><a href="${URL_BASE}autores.html">Autores</a></li>
+                        <li><a href="${URL_BASE}nosotros.html">Nosotros</a></li>
                     </ul>
                 </nav>
             </header>
