@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                         <li><a href="autores.html">Autores</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="banco_de_pruebas.html" class="enlace-starter">Starter</a></li>
                     </ul>
                 </nav>
             </header>
