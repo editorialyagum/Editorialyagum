@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Escritores ▾</a>
                             <ul class="submenu">
-                                <li><a href="${URL_BASE}escritores/convocatorias.html">Convocatorias</a></li>
-                                <li><a href="${URL_BASE}escritores/lineamientos.html">Lineamientos de Envío</a></li>
+                                <li><a href="${URL_BASE}escritores/convocatoria_literaria.html">Convocatoria literaria</a></li>
+                                <li><a href="${URL_BASE}escritores/convocatoria_academica.html">Convocatoria academica</a></li>
                             </ul>
                         </li>
                         
