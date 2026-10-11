@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Autores ▾</a>
                             <ul class="submenu">
-                                <li><a href="${URL_BASE}autores/autores_literarios.html">Autores literarios</a></li>
-                                <li><a href="${URL_BASE}autores/autores_academicos.html">Autores academicos</a></li>
+                                <li><a href="${URL_BASE}catalagos/autores_literarios.html">Autores literarios</a></li>
+                                <li><a href="${URL_BASE}catalagos/autores_academicos.html">Autores academicos</a></li>
                             </ul>
                         </li>
                         
