@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
                             </ul>
                         </li>
                         
-                        <li><a href="${URL_BASE}autores.html">Autores</a></li>
-                        
                         <!-- NUEVO MENÚ DESPLEGABLE: NOSOTROS -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Nosotros ▾</a>
