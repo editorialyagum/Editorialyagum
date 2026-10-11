@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Lectores ▾</a>
                             <ul class="submenu">
-                                <li><a href="${URL_BASE}catalogos/libros_literatos.html">📚 Catálogo Literario</a></li>
-                                <li><a href="${URL_BASE}catalogos/libros_academicos.html">🎓 Catálogo Académico</a></li>
+                                <li><a href="${URL_BASE}catalogos/libros_literarios.html">Catálogo Literario</a></li>
+                                <li><a href="${URL_BASE}catalogos/libros_academicos.html">Catálogo Académico</a></li>
                             </ul>
                         </li>
                         
@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Escritores ▾</a>
                             <ul class="submenu">
-                                <li><a href="${URL_BASE}escritores/convocatorias.html">📢 Convocatorias</a></li>
-                                <li><a href="${URL_BASE}escritores/lineamientos.html">📄 Lineamientos de Envío</a></li>
+                                <li><a href="${URL_BASE}escritores/convocatorias.html">Convocatorias</a></li>
+                                <li><a href="${URL_BASE}escritores/lineamientos.html">Lineamientos de Envío</a></li>
                             </ul>
                         </li>
                         
@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Nosotros ▾</a>
                             <ul class="submenu">
-                                <li><a href="${URL_BASE}nosotros/equipo.html">👥 Nuestro Equipo</a></li>
-                                <li><a href="${URL_BASE}nosotros/politicas.html">🔒 Políticas</a></li>
-                                <li><a href="${URL_BASE}nosotros/terminos.html">⚖️ Términos y Condiciones</a></li>
+                                <li><a href="${URL_BASE}nosotros/equipo.html">Nuestro Equipo</a></li>
+                                <li><a href="${URL_BASE}nosotros/politicas.html">Políticas</a></li>
+                                <li><a href="${URL_BASE}nosotros/terminos.html">Términos y Condiciones</a></li>
                             </ul>
                         </li>
                         
