@@ -26,6 +26,15 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <li><a href="${URL_BASE}catalogos/libros_academicos.html">Catálogo Académico</a></li>
                             </ul>
                         </li>
+
+                        <!-- NUEVO MENÚ DESPLEGABLE: AUTORES -->
+                        <li class="menu-desplegable">
+                            <a href="#" class="trigger-desplegable">Autores ▾</a>
+                            <ul class="submenu">
+                                <li><a href="${URL_BASE}autores/autores_literarios.html">Autores literarios</a></li>
+                                <li><a href="${URL_BASE}autores/autores_academicos.html">Autores academicos</a></li>
+                            </ul>
+                        </li>
                         
                         <!-- MENÚ DESPLEGABLE: ESCRITORES -->
                         <li class="menu-desplegable">
