@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Nosotros ▾</a>
                             <ul class="submenu">
-                                <li><a href="${URL_BASE}nosotros/equipo.html">Nuestro Equipo</a></li>
+                                <li><a href="${URL_BASE}nosotros/nosotros.html">Nuestro Equipo</a></li>
+                                <li><a href="${URL_BASE}nosotros/alcance.html">Nuestro alcance</a></li>
                                 <li><a href="${URL_BASE}nosotros/politicas.html">Políticas</a></li>
                                 <li><a href="${URL_BASE}nosotros/terminos.html">Términos y Condiciones</a></li>
                             </ul>
