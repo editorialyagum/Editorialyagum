@@ -19,6 +19,25 @@
     box-sizing: border-box;
 }
 
+/* --- Forzar Enlaces Blancos Globales --- */
+a, 
+a:link, 
+a:visited, 
+a:hover, 
+a:active {
+    color: #ffffff !important;
+}
+
+/* --- Excepción para Enlaces en Zonas Claras (Formularios / Textos Legales) --- */
+.seccion-legal a,
+.seccion-legal a:link,
+.seccion-legal a:visited,
+.seccion-legal a:hover,
+.seccion-legal a:active {
+    color: #2980b9 !important; /* Mantiene un azul elegante y legible sobre el fondo gris */
+    text-decoration: underline;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -36,7 +55,6 @@ body {
     margin: 0 auto;
     padding: 60px 0;
 }
-
 /* --- Hero Section --- */
 .hero-section {
     min-height: 50vh;
