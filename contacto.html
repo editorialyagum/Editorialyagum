@@ -18,6 +18,40 @@
         }
         .grupo-formulario textarea { resize: vertical; height: 150px; }
         
+        /* Estilos específicos para la sección legal y checkboxes */
+        .seccion-legal {
+            margin: 25px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        .casilla-legal {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+        .casilla-legal input[type="checkbox"] {
+            width: auto;
+            margin-right: 12px;
+            margin-top: 3px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .texto-legal {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        .texto-legal a {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        .texto-legal a:hover {
+            color: #1f618d;
+        }
+        
         /* Botón de envío profesional */
         .btn-enviar { 
             background-color: #2ecc71; color: white; padding: 14px 20px; border: none; border-radius: 4px; 
@@ -44,43 +78,61 @@
 
         <!-- El atributo 'netlify' activa el servidor automático de Netlify de forma invisible -->
         <!-- REEMPLAZA EL FORMULARIO DE CONTACTO.HTML POR ESTE SI DESEAS RECIBIR ARCHIVOS -->
-<!-- El parámetro 'enctype' es obligatorio para que Netlify acepte archivos adjuntos -->
-<form name="contacto-editorial" method="POST" enctype="multipart/form-data" netlify>
-    
-    <div class="grupo-formulario">
-        <label for="nombre">Nombre Completo o de Portada:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel García" required>
-    </div>
+        <!-- El parámetro 'enctype' es obligatorio para que Netlify acepte archivos adjuntos -->
+        <form name="contacto-editorial" method="POST" enctype="multipart/form-data" netlify>
+            
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre Completo o de Portada:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Gabriel García" required>
+            </div>
 
-    <div class="grupo-formulario">
-        <label for="correo">Correo Electrónico de Contacto:</label>
-        <input type="email" id="correo" name="correo" placeholder="autor@ejemplo.com" required>
-    </div>
+            <div class="grupo-formulario">
+                <label for="correo">Correo Electrónico de Contacto:</label>
+                <input type="email" id="correo" name="correo" placeholder="autor@ejemplo.com" required>
+            </div>
 
-    <div class="grupo-formulario">
-        <label for="asunto">Motivo de tu Mensaje:</label>
-        <select id="asunto" name="asunto" required>
-            <option value="">-- Selecciona una opción --</option>
-            <option value="manuscrito">Envío de Manuscrito / Propuesta Editorial</option>
-            <option value="prensa">Prensa y Medios</option>
-            <option value="otro">Otro Asunto Comercial</option>
-        </select>
-    </div>
+            <div class="grupo-formulario">
+                <label for="asunto">Motivo de tu Mensaje:</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="manuscrito">Envío de Manuscrito / Propuesta Editorial</option>
+                    <option value="prensa">Prensa y Medios</option>
+                    <option value="otro">Otro Asunto Comercial</option>
+                </select>
+            </div>
 
-    <!-- ESTA ES LA NUEVA CASILLA PARA ADJUNTAR EL MANUSCRITO -->
-    <div class="grupo-formulario">
-        <label for="manuscrito">Adjuntar Manuscrito (Formatos permitidos: PDF o Word):</label>
-        <input type="file" id="manuscrito" name="manuscrito" accept=".pdf,.docx,.doc,.txt" required>
-    </div>
+            <!-- ESTA ES LA NUEVA CASILLA PARA ADJUNTAR EL MANUSCRITO -->
+            <div class="grupo-formulario">
+                <label for="manuscrito">Adjuntar Manuscrito (Formatos permitidos: PDF o Word):</label>
+                <input type="file" id="manuscrito" name="manuscrito" accept=".pdf,.docx,.doc,.txt" required>
+            </div>
 
-    <div class="grupo-formulario">
-        <label for="mensaje">Sinopsis de tu Obra o Detalles del Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí un breve resumen de tu propuesta..." required></textarea>
-    </div>
+            <div class="grupo-formulario">
+                <label for="mensaje">Sinopsis de tu Obra o Detalles del Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí un breve resumen de tu propuesta..." required></textarea>
+            </div>
 
-    <button type="submit" class="btn-enviar">Enviar Mensaje e Iniciar Evaluación</button>
-</form>
-        
+            <!-- BLOQUE LEGAL OBLIGATORIO (MÉXICO - LFPDPPP) -->
+            <div class="seccion-legal">
+                <!-- Checkbox 1: Privacidad de datos (Requisito del INAI) -->
+                <label class="casilla-legal">
+                    <input type="checkbox" id="acepta_privacidad" name="acepta_privacidad" required>
+                    <span class="texto-legal">
+                        Consiento el tratamiento de mis datos personales y el archivo adjunto conforme al <a href="privacidad.html" target="_blank">Aviso de Privacidad</a> de Editorial Yagum.
+                    </span>
+                </label>
+
+                <!-- Checkbox 2: Términos del negocio editorial (Bases del engranaje) -->
+                <label class="casilla-legal">
+                    <input type="checkbox" id="acepta_bases" name="acepta_bases" required>
+                    <span class="texto-legal">
+                        He leído, entiendo y acepto las <a href="bases.html" target="_blank">Bases de la Convocatoria y Términos Editoriales</a> (incluyendo los criterios de evaluación, propiedad intelectual y el programa de internacionalización).
+                    </span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Mensaje e Iniciar Evaluación</button>
+        </form>
     </main>
 
 </body>
