@@ -1,7 +1,7 @@
 // Motor de Diseño Principal - Editorial Yagum (Rutas Oficiales para GitHub Pages)
 document.addEventListener("DOMContentLoaded", function() {
-    // TU RUTA BASE PERMANENTE EN INTERNET
-    // Al llevar la "/" al final, garantizamos que los archivos se enlacen de forma limpia
+    
+    // RUTA BASE EXACTA DE TU PROYECTO (Corregida según tu captura de pantalla)
     const URL_BASE = "https://editorialyagum.github.io/Editorialyagum/";
 
     // ==========================================================================
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             </ul>
                         </li>
 
-                        <!-- NUEVO MENÚ DESPLEGABLE: AUTORES -->
+                        <!-- MENÚ DESPLEGABLE: AUTORES -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Autores ▾</a>
                             <ul class="submenu">
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             </ul>
                         </li>
                         
-                        <!-- NUEVO MENÚ DESPLEGABLE: NOSOTROS -->
+                        <!-- MENÚ DESPLEGABLE: NOSOTROS -->
                         <li class="menu-desplegable">
                             <a href="#" class="trigger-desplegable">Nosotros ▾</a>
                             <ul class="submenu">
@@ -70,20 +70,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
         elementosDesplegables.forEach(function(item) {
             const botonDisparador = item.querySelector(".trigger-desplegable");
+            if (botonDisparador) {
+                botonDisparador.addEventListener("click", function(evento) {
+                    evento.preventDefault(); 
+                    const submenuInterno = item.querySelector(".submenu");
+                    const estaAbierto = submenuInterno.style.display === "flex";
 
-            botonDisparador.addEventListener("click", function(evento) {
-                evento.preventDefault(); 
-                const submenuInterno = item.querySelector(".submenu");
-                const estaAbierto = submenuInterno.style.display === "flex";
+                    document.querySelectorAll(".submenu").forEach(function(sub) {
+                        sub.style.display = "none";
+                    });
 
-                document.querySelectorAll(".submenu").forEach(function(sub) {
-                    sub.style.display = "none";
+                    if (!estaAbierto && submenuInterno) {
+                        submenuInterno.style.display = "flex";
+                    }
                 });
-
-                if (!estaAbierto) {
-                    submenuInterno.style.display = "flex";
-                }
-            });
+            }
         });
 
         document.addEventListener("click", function(evento) {
