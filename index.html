@@ -13,10 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="header-corporativo"></div>
-    
-    
-    
+
+    <!-- Contenedor dinámico donde el script inyectará el menú de navegación completo -->
+    <div id="header-corporativo"></div>
 
     <!-- Héroe / Presentación Principal -->
     <section id="inicio" class="hero-section">
@@ -32,18 +31,18 @@
     </section>
 
     <!-- Sección Dashboard: Lectores -->
-<section id="lectores" class="catalog-section bg-dark-variant">
-    <div class="container" style="text-align: center;">
-        <h2 class="section-title">Espacio para Lectores</h2>
-        <p class="section-subtitle">Explora nuestro catálogo digital y encuentra tu próxima lectura.</p>
-        
-        <!-- Contenedor optimizado con las clases de botones modernos -->
-        <div class="dashboard-buttons-container">
-            <a href="lectores/literatos.html" class="btn-dashboard btn-literario">📚 Catálogo Literario</a>
-            <a href="lectores/academicos.html" class="btn-dashboard btn-academico">🎓 Catálogo Académico</a>
+    <section id="lectores" class="catalog-section bg-dark-variant">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Espacio para Lectores</h2>
+            <p class="section-subtitle">Explora nuestro catálogo digital y encuentra tu próxima lectura.</p>
+            
+            <!-- Contenedor optimizado con las clases de botones modernos -->
+            <div class="dashboard-buttons-container">
+                <a href="lectores/literatos.html" class="btn-dashboard btn-literario">📚 Catálogo Literario</a>
+                <a href="lectores/academicos.html" class="btn-dashboard btn-academico">🎓 Catálogo Académico</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- NUEVA Sección Dashboard: Escritores -->
     <section id="escritores" class="catalog-section">
@@ -58,13 +57,11 @@
         </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer class="main-footer">
-        <div class="container footer-flex">
-            <p>&copy; 2026 Editorial Yagum. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-<script src="./layout-principal.js"></script>
+    <!-- Contenedor del pie de página listo para la inyección automatizada de las leyes -->
+    <footer class="main-footer"></footer>
+
+    <!-- Script unificado: Construye la interfaz e inyecta la arquitectura legal -->
+    <script src="./layout-principal.js"></script>
     
 </body>
 </html>
