@@ -1,12 +1,15 @@
 // Motor de Diseño Principal - Editorial Yagum (Rutas Oficiales para GitHub Pages)
 document.addEventListener("DOMContentLoaded", function() {
+    // TU RUTA BASE PERMANENTE EN INTERNET
+    // Al llevar la "/" al final, garantizamos que los archivos se enlacen de forma limpia
+    const URL_BASE = "https://editorialyagum.github.io/Editorialyagum/";
+
+    // ==========================================================================
+    // 1. INYECCIÓN DEL HEADER CORPORATIVO
+    // ==========================================================================
     const contenedorHeader = document.getElementById("header-corporativo");
     
     if (contenedorHeader) {
-        // TU RUTA BASE PERMANENTE EN INTERNET
-        // Al llevar la "/" al final, garantizamos que los archivos se enlacen de forma limpia
-        const URL_BASE = "https://editorialyagum.github.io/Editorialyagum/";
-
         contenedorHeader.innerHTML = `
             <header class="header-corporativo-dinamico">
                 <div class="header-branding">
@@ -90,5 +93,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             }
         });
+    }
+
+    // ==========================================================================
+    // 2. INYECCIÓN DEL FOOTER LEGAL UNIFICADO
+    // ==========================================================================
+    const contenedorFooter = document.querySelector(".main-footer");
+    
+    if (contenedorFooter) {
+        contenedorFooter.innerHTML = `
+            <div class="container footer-flex" style="display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 20px 0; text-align: center;">
+                <p style="margin: 0; color: #9ca3af;">&copy; ${new Date().getFullYear()} Editorial Yagum. Todos los derechos reservados.</p>
+                <nav class="nav-legal" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; font-size: 0.8rem;">
+                    <a href="${URL_BASE}legales/politica_privacidad.html">Aviso de Privacidad</a> | 
+                    <a href="${URL_BASE}legales/politicas_convocatorias.html">Bases de la Convocatoria</a> | 
+                    <a href="${URL_BASE}legales/politicas_cookies.html">Política de Cookies</a> | 
+                    <a href="${URL_BASE}legales/terminoscondiciones_generales.html">Términos Generales</a>
+                </nav>
+            </div>
+        `;
     }
 });
