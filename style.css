@@ -49,6 +49,51 @@ body {
     line-height: 1.6;
 }
 
+/* ==========================================================================
+   ESCALADO TIPOGRÁFICO GLOBAL (Para páginas de lectura y legales)
+   ========================================================================== */
+h1, h2, h3, h4 {
+    color: var(--text-main);
+    font-family: var(--font-base);
+    font-weight: 800;
+    line-height: 1.3;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+h1 { font-size: 2.6rem; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; margin-top: 0; }
+h2 { font-size: 2.0rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; }
+h3 { font-size: 1.5rem; font-weight: 600; color: var(--accent); }
+h4 { font-size: 1.2rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+/* Estilo estandarizado para párrafos extensos de lectura */
+p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+/* Resaltado de conceptos legales o importantes dentro de los párrafos */
+strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Estilo para listas ordenadas o con viñetas en los lineamientos */
+ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
