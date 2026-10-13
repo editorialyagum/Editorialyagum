@@ -76,6 +76,18 @@ p {
     font-weight: 300;
 }
 
+
+/* Opción Dorado */
+.text-gold {
+    color: #ffd700 !important; /* Hexadecimal de dorado clásico */
+    /* Si prefieres usar RGB sería: color: rgb(255, 215, 0) !important; */
+}
+
+/* Opción Morado */
+.text-purple {
+    color: #8a2be2 !important; /* Hexadecimal de morado/violeta */
+    /* Si prefieres usar RGB sería: color: rgb(138, 43, 226) !important; */
+}
 /* Resaltado de conceptos legales o importantes dentro de los párrafos */
 strong {
     color: var(--text-main);
