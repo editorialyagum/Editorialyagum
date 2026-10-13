@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <a href="${URL_BASE}legales/politica_privacidad.html">Aviso de Privacidad</a> | 
                     <a href="${URL_BASE}legales/politicas_convocatorias.html">Bases de la Convocatoria</a> | 
                     <a href="${URL_BASE}legales/politicas_cookies.html">Política de Cookies</a> | 
-                    <a href="${URL_BASE}legales/terminoscondiciones_generales.html">Términos Generales</a>
+                    <a href="${URL_BASE}legales/terminosycondiciones_generales.html">Términos Generales</a>
                 </nav>
             </div>
         `;
