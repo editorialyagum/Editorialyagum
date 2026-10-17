@@ -3,60 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cambia este título según la página (ej: Catálogo Académico | Editorial Yagum) -->
-    <title>Convocatoria literaria | Editorial Yagum</title>
-    
-    <!-- CONEXIÓN AL CSS GENERAL -->
-    <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./style.css" -->
-    <!-- NOTA: Si el archivo está DENTRO de una carpeta (como lectores/), usa "../style.css" -->
-    <link rel="stylesheet" href="../style.css">
-    
-    <!-- Tipografía corporativa -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Editorial Yagum - Sello editorial digital especializado en literatura académica, ciencia ficción, drama y suspenso.">
+    <meta name="author" content="Editorial Yagum">
+    <title>Dom Dali Studio (Дом Дали Студио)</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Tipografía moderna e híbrida (Geométrica para títulos, legible para textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- El script inyectará aquí de forma automática el menú superior con sus submenús -->
+
+    <!-- Contenedor dinámico donde el script inyectará el menú de navegación completo -->
     <div id="header-corporativo"></div>
 
-    <!-- CUERPO PRINCIPAL DE LA PÁGINA (Aquí va tu contenido exclusivo) -->
-    <main class="container" style="padding-top: 40px;">
-        
-        <!-- Encabezado de la sección -->
-        <h2 class="section-title">Dom Dali Studio (Дом Дали Студио)</h2>
-        <p class="section-subtitle">Breve subtítulo informativo o explicativo para guiar al usuario.</p>
-        
-        <!-- ÁREA DE EXPERIMENTACIÓN / CONTENIDO -->
-        <div class="zona-contenido">
-            <p>
-Guía de Envío de Manuscritos y Proceso Editorial
-
-
-1. El Proceso de Selección (Paso a Paso)
-
-• Fase 1: Recepción de Propuestas (Fechas Específicas). Los manuscritos solo se recibirán durante los periodos de convocatoria abiertos. Debes enviar una sinopsis detallada, una presentación escrita de la obra y, de manera opcional/preferente, un enlace a un video (Pitch) de máximo 3 minutos explicando tu proyecto.
-• Fase 2: Evaluación Inicial. Nuestro comité editorial revisará el material enviado. Si tu propuesta se alinea con nuestro catálogo, te contactaremos en un plazo máximo de [X semanas/meses] para solicitarte los primeros capítulos o un porcentaje específico de la obra (por ejemplo, el primer 30%).
-• Fase 3: Lectura y Dictamen. Tras evaluar el porcentaje de la obra solicitado, nos comunicaremos contigo para darte una respuesta definitiva y, en caso positivo, presentarte una propuesta de contrato.
-
-2. Nuestra Promesa de Crecimiento (Financiación de Traducción)
-
-• Apuesta por la Internacionalización. Creemos en el potencial global de nuestras obras. Por ello, establecemos un compromiso de co-inversión transparente: si tu obra en formato digital alcanza las [Número, ej. 1,000 o 2,000] copias vendidas, la editorial asumirá y financiará al 100% los costos de traducción profesional del libro para lanzarlo al mercado internacional (ej. inglés/otros idiomas).</p>
+    
+    <!-- NUEVA Sección Dashboard: Escritores -->
+    <section id="escritores" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Espacio para Escritores</h2>
+            <p class="section-subtitle">¿Eres autor académico o literario? Queremos conocer tu manuscrito.</p>
+            
+            <div class="dashboard-buttons-container">
+                <a href="/escritores/convocatoria_academica.html" class="btn-dashboard btn-academico">Convocatoria academica</a>
+                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-literario">Convocatoria literaria</a>
+                <a href="/escritores/lineamientos_academicos.html" class="btn-dashboard btn-academico">Lineamientos academicos</a>
+                <a href="/escritores/lineamientos_literarios.html" class="btn-dashboard btn-literario">Lineamientos literarios</a>
+            </div>
         </div>
+    </section>
 
-    </main>
-
-    <!-- Pie de página unificado -->
-    <footer class="main-footer">
-        <div class="container footer-flex">
-            <p>&copy; 2026 Editorial Yagum. Todos los derechos reservados.</p>
-            <p>San Luis Potosí, México | Sello Editorial Independiente</p>
+     <!-- NUEVA Sección Dashboard: Sellos -->
+    <section id="sellos" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Sellos</h2>
+            <p class="section-subtitle">¿Quieres concoer bajo que sello estara tu manuscrito?</p>
+            
+            <div class="dashboard-buttons-container">
+                <a href="/escritores/convocatoria_academica.html" class="btn-dashboard btn-academico">Sello Yguni (イグニ)</a>
+                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-literario">Sello Lumière</a>
+                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-literario">Sello Дом Дали</a>
+                </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- CONEXIÓN AL SCRIPT DINÁMICO -->
-    <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./layout-principal.js" -->
-    <!-- NOTA: Si el archivo está DENTRO de una carpeta (como escritores/), usa "../layout-principal.js" -->
-    <script src="../layout-principal.js"></script>
+     <!-- NUEVA Sección Dashboard: Faqs -->
+    <section id="faqs" class="catalog-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="section-subtitle">¿Tienes dudas y preguntas?</p>
+            
+            <div class="dashboard-buttons-container">
+                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-academico">Seccion de dudas y preguntas</a>
+                </div>
+        </div>
+    </section>
+    <!-- Contenedor del pie de página listo para la inyección automatizada de las leyes -->
+    <footer class="main-footer"></footer>
+
+    <!-- Script unificado: Construye la interfaz e inyecta la arquitectura legal -->
+    <script src="./layout-principal.js"></script>
+    
 </body>
 </html>
