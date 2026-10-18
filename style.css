@@ -449,6 +449,7 @@ li {
     .menu-desplegable:hover .submenu {
         display: flex;
     }
+}
 
    /* ==========================================================================
    DISEÑO DE BOTONES CUADRADOS DE CATÁLOGO (TEXTO SIEMPRE BLANCO)
@@ -504,4 +505,4 @@ li {
     transform: translateY(-2px);
 }
    
-}
+
