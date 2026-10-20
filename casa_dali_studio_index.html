@@ -16,36 +16,54 @@
 
     <!-- Contenedor dinámico donde el script inyectará el menú de navegación completo -->
     <div id="header-corporativo"></div>
+ <!-- CUERPO PRINCIPAL DE LA PÁGINA (Aquí va tu contenido exclusivo) -->
+    <main class="container" style="padding-top: 40px;">
+        
+        <!-- Encabezado de la sección -->
+        <h2 class="section-title">Título de esta sección</h2>
+        <p class="section-subtitle">Breve subtítulo informativo o explicativo para guiar al usuario.</p>
+        
+        <!-- ÁREA DE EXPERIMENTACIÓN / CONTENIDO -->
+        <div class="zona-contenido">
+
+
+
+Estructura de Inversión Compartida
+
+Nuestros servicios de coedición se dividen en tres niveles de complejidad técnica, ajustados de manera personalizada tras la evaluación del manuscrito por parte de nuestros profesionales (Filtros S3):
+
+🛰️ Nivel I: Arquitectura Digital e Identidad Indexada
+
+Diseñado para investigadores y autores de vanguardia que priorizan el posicionamiento científico, el resguardo digital y la difusión en repositorios globales.
+• Servicios Incluidos: Corrección ortotipográfica y de sintaxis, diseño de portada de colección, interiorismo digital avanzado, asignación de Registro DOI Institucional y vinculación automatizada al perfil ORCID del autor.
+• Distribución: Lanzamiento prioritario en plataformas de lectura y repositorios digitales en todo el mundo bajo el sello Dom Dalí.
+
+🌍 Nivel II: Edición Híbrida y Distribución Global Bajo Demanda
+
+El estándar de alta gama de la editorial. Une la inmediatez del entorno digital con el prestigio del objeto físico impreso con tecnología de punta.
+• Servicios Incluidos: Todo lo contemplado en el Nivel I, sumando el diseño técnico de cubiertas completas (lomo y contraportada estructurados) y corrección de estilo profunda.
+• Distribución: Distribución internacional simultánea (E-book y formato físico a través del sistema de Impresión Bajo Demanda - POD en mercados americanos, europeos y asiáticos). El manuscrito queda alojado de manera perpetua en los servidores de distribución del Grupo Yagum.
+
+💎 Nivel III: Edición de Culto y Traducción de Escaleta
+
+El nivel definitivo de expansión territorial. Diseñado para obras revolucionarias que requieren romper las barreras del idioma bajo una dirección artística minuciosa.
+• Servicios Incluidos: Todo lo contemplado en los niveles anteriores, incorporando la gestión y desarrollo del Servicio de Traducción Especializada coordinado cronológicamente con la escaleta de producción del manuscrito.
+• Distribución: Lanzamiento del catálogo en mercados multilingües con estrategias específicas de indexación internacional.
+
+📥 Solicitud de Cotización Institucional
+
+Los costos de coedición se calculan bajo un estricto análisis de coste de producción (basado en la extensión del manuscrito, la complejidad de las tablas/gráficos y los requerimientos de traducción). El dinero financia la infraestructura técnica de la obra, manteniendo intacta la ética del grupo.
+Para iniciar el proceso de evaluación y recibir el Dossier de Costos en PDF, envíe su obra a nuestra coordinación operativa:
+• Contacto Oficial: contacto@editorialyagum.com
+• Requisito Obligatorio: El manuscrito debe pasar con éxito los filtros de legibilidad de nuestro comité antes de emitir cualquier presupuesto o contrato digital con e.firma.
+
+
+
+
+
+
 
     
-    <!-- NUEVA Sección Dashboard: Escritores -->
-    <section id="escritores" class="catalog-section">
-        <div class="container">
-            <h2 class="section-title">Espacio para Escritores</h2>
-            <p class="section-subtitle">¿Eres autor académico o literario? Queremos conocer tu manuscrito.</p>
-            
-            <div class="dashboard-buttons-container">
-                <a href="/escritores/convocatoria_academica.html" class="btn-dashboard btn-academico">Convocatoria academica</a>
-                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-literario">Convocatoria literaria</a>
-                <a href="/escritores/lineamientos_academicos.html" class="btn-dashboard btn-academico">Lineamientos academicos</a>
-                <a href="/escritores/lineamientos_literarios.html" class="btn-dashboard btn-literario">Lineamientos literarios</a>
-            </div>
-        </div>
-    </section>
-
-     <!-- NUEVA Sección Dashboard: Sellos -->
-    <section id="sellos" class="catalog-section">
-        <div class="container">
-            <h2 class="section-title">Sellos</h2>
-            <p class="section-subtitle">¿Quieres concoer bajo que sello estara tu manuscrito?</p>
-            
-            <div class="dashboard-buttons-container">
-                <a href="/escritores/convocatoria_academica.html" class="btn-dashboard btn-academico">Sello Yguni (イグニ)</a>
-                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-literario">Sello Lumière</a>
-                <a href="/escritores/convocatoria_literaria.html" class="btn-dashboard btn-literario">Sello Дом Дали</a>
-                </div>
-        </div>
-    </section>
 
      <!-- NUEVA Sección Dashboard: Faqs -->
     <section id="faqs" class="catalog-section">
@@ -58,11 +76,20 @@
                 </div>
         </div>
     </section>
-    <!-- Contenedor del pie de página listo para la inyección automatizada de las leyes -->
-    <footer class="main-footer"></footer>
+            
+    </main>
+    <!-- Pie de página unificado -->
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 Editorial Yagum. Todos los derechos reservados.</p>
+            <p>San Luis Potosí, México | Sello Editorial Independiente</p>
+        </div>
+    </footer>
 
-    <!-- Script unificado: Construye la interfaz e inyecta la arquitectura legal -->
+    <!-- CONEXIÓN AL SCRIPT DINÁMICO -->
+    <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./layout-principal.js" -->
+    <!-- NOTA: Si el archivo está DENTRO de una carpeta (como escritores/), usa "../layout-principal.js" -->
     <script src="./layout-principal.js"></script>
-    
+</body>
 </body>
 </html>
