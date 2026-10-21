@@ -504,5 +504,34 @@ li {
     background-color: #334155;
     transform: translateY(-2px);
 }
-   
+
+/* 1. SEPARAR LAS 4 COLUMNAS DEL FOOTER EN HORIZONTAL (Opcional pero recomendado) */
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 2. CLASIFICAR ÚNICAMENTE LOS ENLACES INTERNOS DEL FOOTER */
+footer .columna ul {
+    display: flex;          /* Hace que el listado de subenlaces sea horizontal */
+    flex-wrap: wrap;        /* Si no caben en pantallas chicas, bajan ordenadamente */
+    gap: 15px;              /* Espaciado entre los subenlaces */
+    list-style: none;       /* Quita los puntos negros o viñetas */
+    padding: 0;             
+    margin: 0;              
+}
+
+/* 3. ESTILOS EXCLUSIVOS PARA LOS ENLACES DEL FOOTER */
+footer .columna ul li a {
+    text-decoration: none;  
+    color: #4b5563;         /* Color gris suave acorde a la editorial */
+    font-size: 0.9rem;
+}
+
+footer .columna ul li a:hover {
+    color: #111827;         /* Color más oscuro al pasar el cursor */
+}
+
 
