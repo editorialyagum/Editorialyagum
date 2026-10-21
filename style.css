@@ -1,41 +1,32 @@
-/* ==========================================================================
-   VARIABLES DE DISEÑO Y PALETA DE COLORES
-   ========================================================================== */
-:root {
-    --bg-dark: #0f1115;        /* Fondo principal (Oscuro profundo / Tecnológico) */
-    --bg-card: #171a21;        /* Fondo de tarjetas de libros */
-    --bg-light: #1f242e;       /* Variante para secciones */
-    --text-main: #f3f4f6;      /* Texto principal brillante */
-    --text-muted: #9ca3af;     /* Texto secundario / gris */
-    --accent: #3b82f6;         /* Azul digital (Seguridad académica y Sci-Fi) */
-    --accent-scifi: #a855f7;   /* Morado/Neón para la línea de ficción */
-    --font-base: system-ui, -apple-system, sans-serif;
-}
-
-/* --- Reseteo Básico --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* --- Forzar Enlaces Blancos Globales --- */
 a, 
 a:link, 
 a:visited, 
 a:hover, 
-a:active {
-    color: #ffffff !important;
+a:active {color: #ffffff !important;}
+
+/* ==========================================================================
+   01. VARIABLES DE DISEÑO Y PALETA DE COLORES
+   ========================================================================== */
+:root {
+    --accent: #3b82f6;
+    --accent-scifi: #a855f7;
+    --bg-card: #171a21;
+    --bg-dark: #0f1115;
+    --bg-light: #1f242e;
+    --font-base: system-ui, -apple-system, sans-serif;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
 }
 
-/* --- Excepción para Enlaces en Zonas Claras (Formularios / Textos Legales) --- */
-.seccion-legal a,
-.seccion-legal a:link,
-.seccion-legal a:visited,
-.seccion-legal a:hover,
-.seccion-legal a:active {
-    color: #2980b9 !important; /* Mantiene un azul elegante y legible sobre el fondo gris */
-    text-decoration: underline;
+/* ==========================================================================
+   02. REINICIO Y ESTILOS GLOBALES
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -49,128 +40,173 @@ body {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   ESCALADO TIPOGRÁFICO GLOBAL (Para páginas de lectura y legales)
-   ========================================================================== */
-h1, h2, h3, h4 {
-    color: var(--text-main);
-    font-family: var(--font-base);
-    font-weight: 800;
-    line-height: 1.3;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    letter-spacing: -0.5px;
+a {
+    text-decoration: none;
 }
 
-h1 { font-size: 2.6rem; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; margin-top: 0; }
-h2 { font-size: 2.0rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 8px; }
-h3 { font-size: 1.5rem; font-weight: 600; color: var(--accent); }
-h4 { font-size: 1.2rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
-
-/* Estilo estandarizado para párrafos extensos de lectura */
-p {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    font-weight: 300;
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
-
-/* Opción Dorado */
-.text-gold {
-    color: #ffd700 !important; /* Hexadecimal de dorado clásico */
-    /* Si prefieres usar RGB sería: color: rgb(255, 215, 0) !important; */
-}
-
-/* Opción Morado */
-.text-purple {
-    color: #8a2be2 !important; /* Hexadecimal de morado/violeta */
-    /* Si prefieres usar RGB sería: color: rgb(138, 43, 226) !important; */
-}
-/* Resaltado de conceptos legales o importantes dentro de los párrafos */
 strong {
     color: var(--text-main);
     font-weight: 600;
 }
 
-/* Estilo para listas ordenadas o con viñetas en los lineamientos */
-ul, ol {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
+/* ==========================================================================
+   03. TIPOGRAFÍA GLOBAL
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text-main);
+    font-family: var(--font-base);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+h1 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    font-size: 2.6rem;
+    margin-top: 0;
+    padding-bottom: 15px;
+}
+
+h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 2rem;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h4 {
     color: var(--text-muted);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
 li {
-    margin-bottom: 0.5rem;
     line-height: 1.6;
+    margin-bottom: 0.5rem;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 0;
+ol,
+ul {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
 }
-/* --- Hero Section --- */
+
+/* ==========================================================================
+   04. COLORES DE TEXTO Y SECCIONES LEGALES
+   ========================================================================== */
+
+.text-gold {
+    color: #ffd700 !important;
+}
+
+.text-purple {
+    color: #8a2be2 !important;
+}
+
+/* --- Excepción para Enlaces en Zonas Claras (Formularios / Textos Legales) --- */
+.seccion-legal a,
+.seccion-legal a:link,
+.seccion-legal a:visited,
+.seccion-legal a:hover,
+.seccion-legal a:active {
+    color: #2980b9 !important; /* Mantiene un azul elegante y legible sobre el fondo gris */
+    text-decoration: underline;}
+/* ==========================================================================
+   05. CONTENEDORES GENERALES
+   ========================================================================== */
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 60px 0;
+    width: 90%;
+}
+
+/* ==========================================================================
+   06. HERO SECTION
+   ========================================================================== */
+
 .hero-section {
-    min-height: 50vh;
-    display: flex;
     align-items: center;
-    padding-top: 40px;
     background: linear-gradient(135deg, #0f1115 0%, #151922 100%);
+    display: flex;
+    min-height: 50vh;
+    padding-top: 40px;
 }
 
 .hero-content {
+    margin: 0 auto;
     max-width: 800px;
     text-align: center;
-    margin: 0 auto;
 }
 
 .hero-subtitle {
     color: var(--accent);
-    text-transform: uppercase;
+    font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 15px;
-    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 .hero-title {
     font-size: 2.5rem;
     font-weight: 800;
+    letter-spacing: -1px;
     line-height: 1.2;
     margin-bottom: 25px;
-    letter-spacing: -1px;
 }
 
 .hero-text {
-    font-size: 1.1rem;
     color: var(--text-muted);
-    margin-bottom: 40px;
+    font-size: 1.1rem;
     font-weight: 300;
+    margin-bottom: 40px;
 }
 
-/* --- Botones --- */
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
+/* ==========================================================================
+   07. BOTONES GENERALES
+   ========================================================================== */
 
 .btn {
-    display: inline-block;
-    padding: 12px 30px;
     border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
+    display: inline-block;
     font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 30px;
     transition: all 0.3s ease;
 }
 
 .btn-primary {
     background-color: var(--accent);
-    color: white;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
@@ -188,13 +224,35 @@ li {
     transform: translateY(-2px);
 }
 
-/* --- Secciones de Catálogo --- */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   08. SECCIONES DE CATÁLOGO
+   ========================================================================== */
+
+.bg-dark-variant {
+    background-color: var(--bg-light);
+}
+
+.catalog-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
 .catalog-section {
     padding: 60px 0;
 }
 
-.bg-dark-variant {
-    background-color: var(--bg-light);
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
 
 .section-title {
@@ -203,46 +261,60 @@ li {
     margin-bottom: 10px;
 }
 
-.section-subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-    font-weight: 300;
+/* ==========================================================================
+   09. TARJETAS DE LIBROS
+   ========================================================================== */
+
+.badge {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 4px;
+    color: var(--accent);
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding: 4px 10px;
+    text-transform: uppercase;
 }
 
-.catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+.badge-scifi {
+    background-color: rgba(168, 85, 247, 0.1);
+    color: var(--accent-scifi);
 }
 
-/* --- Tarjetas de Libros --- */
 .book-card {
     background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.03);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
     border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-5px);
 }
 
-.book-cover, .book-cover-placeholder {
-    height: 380px;
-    background-color: #2e3545;
-    display: flex;
+.book-cover,
+.book-cover-placeholder {
     align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    color: var(--text-muted);
+    background-color: #2e3545;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    display: flex;
+    font-weight: 600;
+    height: 380px;
+    justify-content: center;
 }
 
 .book-cover-placeholder {
-    background: repeating-linear-gradient(45deg, #171a21, #171a21 10px, #1f242e 10px, #1f242e 20px);
+    background: repeating-linear-gradient(
+        45deg,
+        #171a21,
+        #171a21 10px,
+        #1f242e 10px,
+        #1f242e 20px
+    );
 }
 
 .book-info {
@@ -260,361 +332,320 @@ li {
     margin-bottom: 15px;
 }
 
-.badge {
-    display: inline-block;
-    padding: 4px 10px;
-    background-color: rgba(59, 130, 246, 0.1);
-    color: var(--accent);
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.badge-scifi {
-    background-color: rgba(168, 85, 247, 0.1);
-    color: var(--accent-scifi);
-}
-
 .book-info .summary {
-    font-size: 0.9rem;
     color: var(--text-muted);
+    font-size: 0.9rem;
     margin-bottom: 20px;
 }
 
 .btn-link {
     color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
     font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .btn-link:hover {
     text-decoration: underline;
 }
 
-/* --- Footer --- */
-.main-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    background-color: var(--bg-dark);
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.footer-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
-}
-
 /* ==========================================================================
-   ESTILOS PARA EL MENÚ DINÁMICO Y DESPLEGABLES (DROPDOWNS)
+   10. HEADER: ENCABEZADO DE EDITORIAL YAGUM
    ========================================================================== */
+
 .header-corporativo-dinamico {
     background-color: var(--bg-dark);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 30px 0 20px 0;
-    text-align: center;
     font-family: var(--font-base);
+    padding: 30px 0 20px;
+    text-align: center;
 }
 
 .header-branding h1 {
+    border-bottom: none;
+    color: var(--text-main);
     font-size: 2.2rem;
     font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 5px;
-    color: var(--text-main);
+    margin-top: 0;
+    padding-bottom: 0;
 }
 
 .header-branding p {
-    margin-bottom: 20px;
     color: var(--accent);
-    font-style: italic;
     font-size: 1rem;
+    font-style: italic;
     font-weight: 300;
+    margin-bottom: 20px;
 }
+
+/* ==========================================================================
+   11. HEADER: NAVEGACIÓN PRINCIPAL
+   ========================================================================== */
 
 .nav-corporativo-dinamico {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 15px;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1200px;
+    padding-top: 15px;
 }
 
-.nav-corporativo-dinamico ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    gap: 35px;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-corporativo-dinamico a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.nav-corporativo-dinamico a:hover {
-    color: var(--text-main);
-}
-
-.nav-corporativo-dinamico .enlace-starter {
-    color: var(--accent-scifi);
-}
-.nav-corporativo-dinamico .enlace-starter:hover {
-    color: var(--text-main);
-    text-shadow: 0 0 8px var(--accent-scifi);
-}
-
-/* Lógica Física de los Desplegables */
-.menu-desplegable {
-    position: relative;
-}
-
-.menu-desplegable .trigger-desplegable {
-    cursor: pointer;
-}
-
-.menu-desplegable .submenu {
-    display: none; 
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
-    min-width: 220px;
-    flex-direction: column;
-    gap: 0;
-    z-index: 2000;
-    margin-top: 10px;
-}
-
-.menu-desplegable .submenu::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 0 6px 6px 6px;
-    border-style: solid;
-    border-color: transparent transparent var(--bg-card) transparent;
-}
-
-.menu-desplegable .submenu li {
-    width: 100%;
-}
-
-.menu-desplegable .submenu a {
-    display: block;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-align: left;
-    color: var(--text-muted);
-}
-
-.menu-desplegable .submenu a:hover {
-    background-color: var(--bg-light);
-    color: var(--text-main);
-}
-
-.menu-desplegable:hover .submenu {
-    display: flex;
-}
-
-/* --- Ajuste Responsivo Móvil --- */
-@media (max-width: 768px) {
-    .nav-corporativo-dinamico ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .menu-desplegable .submenu {
-        position: static;
-        transform: none;
-        box-shadow: none;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.02);
-        margin-top: 5px;
-    }
-    .menu-desplegable:hover .submenu {
-        display: flex;
-    }
-}
-
-   /* ==========================================================================
-   DISEÑO DE BOTONES CUADRADOS DE CATÁLOGO (TEXTO SIEMPRE BLANCO)
-   ========================================================================== */
-
-/* Contenedor para alinear los botones uno al lado del otro */
-.dashboard-buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap; /* Se acomoda en celulares automáticamente */
-}
-
-/* Estilo base del botón cuadrado */
-.btn-dashboard {
-    display: inline-block;
-    padding: 14px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none; /* Elimina el subrayado de enlace */
-    border-radius: 6px; /* Bordes ligeramente suavizados, estilo cuadrado moderno */
-    transition: all 0.3s ease;
-    min-width: 220px;
-    text-align: center;
-}
-
-/* --- REGLA DE ORO: Forzar color blanco en cualquier estado del enlace --- */
-.btn-dashboard, 
-.btn-dashboard:link, 
-.btn-dashboard:visited, 
-.btn-dashboard:active {
-    color: #ffffff !important; /* Blanco brillante garantizado */
-}
-
-/* Color personalizado para el botón Literario (Tono vino de la editorial) */
-.btn-literario {
-    background-color: #a33b3b;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.btn-literario:hover {
-    background-color: #be4d4d;
-    transform: translateY(-2px); /* Pequeña animación al pasar el dedo/ratón */
-}
-
-/* Color personalizado para el botón Académico (Azul tecnológico) */
-.btn-academico {
-    background-color: #1e293b; /* Color pizarra oscuro a juego con tu paleta */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.btn-academico:hover {
-    background-color: #334155;
-    transform: translateY(-2px);
-}
-
-/* 1. SEPARAR LAS 4 COLUMNAS DEL FOOTER EN HORIZONTAL (Opcional pero recomendado) */
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* 2. CLASIFICAR ÚNICAMENTE LOS ENLACES INTERNOS DEL FOOTER */
-footer .columna ul {
-    display: flex;          /* Hace que el listado de subenlaces sea horizontal */
-    flex-wrap: wrap;        /* Si no caben en pantallas chicas, bajan ordenadamente */
-    gap: 15px;              /* Espaciado entre los subenlaces */
-    list-style: none;       /* Quita los puntos negros o viñetas */
-    padding: 0;             
-    margin: 0;              
-}
-
-/* 3. ESTILOS EXCLUSIVOS PARA LOS ENLACES DEL FOOTER */
-footer .columna ul li a {
-    text-decoration: none;  
-    color: #4b5563;         /* Color gris suave acorde a la editorial */
-    font-size: 0.9rem;
-}
-
-footer .columna ul li a:hover {
-    color: #111827;         /* Color más oscuro al pasar el cursor */
-}
-
-/* ==================================================
-   MENÚ DESPLEGABLE SIN JAVASCRIPT
-   ================================================== */
-
-/* El menú principal no debe heredar márgenes de listas */
 .nav-corporativo-dinamico > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .nav-corporativo-dinamico > ul > li {
     margin-bottom: 0;
 }
 
+.nav-corporativo-dinamico a {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-corporativo-dinamico a:hover,
+.nav-corporativo-dinamico a:focus-visible {
+    color: var(--text-main);
+}
+
+.nav-corporativo-dinamico .enlace-starter {
+    color: var(--accent-scifi);
+}
+
+.nav-corporativo-dinamico .enlace-starter:hover,
+.nav-corporativo-dinamico .enlace-starter:focus-visible {
+    color: var(--text-main);
+    text-shadow: 0 0 8px var(--accent-scifi);
+}
+
+/* ==========================================================================
+   12. HEADER: MENÚS DESPLEGABLES SIN JAVASCRIPT
+   ========================================================================== */
+
 .nav-corporativo-dinamico .menu-desplegable {
     position: relative;
 }
 
-/* Ocultar los submenús inicialmente */
-.nav-corporativo-dinamico .menu-desplegable > .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2000;
+.nav-corporativo-dinamico .trigger-desplegable {
+    cursor: pointer;
+}
 
-    min-width: 230px;
-    margin: 0;
-    padding: 8px 0;
-    list-style: none;
-
-    flex-direction: column;
-    gap: 0;
-    text-align: left;
-
+.nav-corporativo-dinamico .submenu {
     background-color: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 6px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    left: 50%;
+    list-style: none;
+    margin: 10px 0 0;
+    min-width: 220px;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    z-index: 2000;
 }
 
-/* Mostrar al pasar el cursor o navegar con teclado */
-.nav-corporativo-dinamico
-.menu-desplegable:hover > .submenu,
-.nav-corporativo-dinamico
-.menu-desplegable:focus-within > .submenu {
+.nav-corporativo-dinamico .menu-desplegable:hover > .submenu,
+.nav-corporativo-dinamico .menu-desplegable:focus-within > .submenu {
     display: flex;
 }
 
-/* Enlaces de los submenús */
+.nav-corporativo-dinamico .submenu::before {
+    border-color: transparent transparent var(--bg-card);
+    border-style: solid;
+    border-width: 0 6px 6px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: -6px;
+    transform: translateX(-50%);
+}
+
 .nav-corporativo-dinamico .submenu li {
+    margin-bottom: 0;
     width: 100%;
-    margin: 0;
 }
 
 .nav-corporativo-dinamico .submenu a {
+    color: var(--text-muted);
     display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
     padding: 12px 20px;
     text-align: left;
-    white-space: normal;
 }
 
-/* Ajustes para celulares */
+.nav-corporativo-dinamico .submenu a:hover,
+.nav-corporativo-dinamico .submenu a:focus-visible {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   13. DASHBOARD: BOTONES DE CATÁLOGO
+   ========================================================================== */
+
+.dashboard-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-dashboard {
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 220px;
+    padding: 14px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-dashboard,
+.btn-dashboard:active,
+.btn-dashboard:link,
+.btn-dashboard:visited {
+    color: #ffffff;
+}
+
+.btn-literario {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-literario:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+
+.btn-academico {
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-academico:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   14. FOOTER: PIE DE PÁGINA
+   ========================================================================== */
+
+.main-footer {
+    background-color: var(--bg-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-flex {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+footer .columna ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .columna ul li {
+    margin-bottom: 0;
+}
+
+footer .columna ul li a,
+footer .columna ul li a:link,
+footer .columna ul li a:visited {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+footer .columna ul li a:hover,
+footer .columna ul li a:focus-visible {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   15. DISEÑO RESPONSIVO: TABLETAS Y CELULARES
+   ========================================================================== */
+
 @media (max-width: 768px) {
-    .nav-corporativo-dinamico > ul {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
+    .container {
+        padding: 40px 0;
     }
 
-    .nav-corporativo-dinamico .menu-desplegable > .submenu {
+    .footer-flex {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-corporativo-dinamico {
+        padding: 25px 0 15px;
+    }
+
+    .hero-buttons {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .nav-corporativo-dinamico > ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-corporativo-dinamico .submenu {
+        background-color: rgba(255, 255, 255, 0.02);
+        border: none;
+        box-shadow: none;
+        left: auto;
+        margin-top: 5px;
+        min-width: 0;
         position: static;
         transform: none;
         width: 100%;
-        min-width: 0;
-        box-shadow: none;
-        margin-top: 5px;
-        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .nav-corporativo-dinamico .submenu::before {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
 }
-
-
