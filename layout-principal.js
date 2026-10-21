@@ -65,22 +65,24 @@ document.addEventListener("DOMContentLoaded", function() {
             </header>
         `;
 
-        // --- INTERACTIVIDAD PARA MÓVILES (PANTALLAS TÁCTILES) ---
+        // --- INTERACTIVIDAD PARA MÓVILES (SOLUCIÓN ANTIMÉTODO NULL) ---
         const elementosDesplegables = document.querySelectorAll(".menu-desplegable");
 
         elementosDesplegables.forEach(function(item) {
             const botonDisparador = item.querySelector(".trigger-desplegable");
-            if (botonDisparador) {
+            const submenuInterno = item.querySelector(".submenu");
+
+            // Validamos que ambos elementos existan antes de leer sus propiedades css
+            if (botonDisparador && submenuInterno) {
                 botonDisparador.addEventListener("click", function(evento) {
                     evento.preventDefault(); 
-                    const submenuInterno = item.querySelector(".submenu");
                     const estaAbierto = submenuInterno.style.display === "flex";
 
                     document.querySelectorAll(".submenu").forEach(function(sub) {
                         sub.style.display = "none";
                     });
 
-                    if (!estaAbierto && submenuInterno) {
+                    if (!estaAbierto) {
                         submenuInterno.style.display = "flex";
                     }
                 });
