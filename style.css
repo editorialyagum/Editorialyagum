@@ -534,4 +534,87 @@ footer .columna ul li a:hover {
     color: #111827;         /* Color más oscuro al pasar el cursor */
 }
 
+/* ==================================================
+   MENÚ DESPLEGABLE SIN JAVASCRIPT
+   ================================================== */
+
+/* El menú principal no debe heredar márgenes de listas */
+.nav-corporativo-dinamico > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-corporativo-dinamico > ul > li {
+    margin-bottom: 0;
+}
+
+.nav-corporativo-dinamico .menu-desplegable {
+    position: relative;
+}
+
+/* Ocultar los submenús inicialmente */
+.nav-corporativo-dinamico .menu-desplegable > .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+
+    min-width: 230px;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Mostrar al pasar el cursor o navegar con teclado */
+.nav-corporativo-dinamico
+.menu-desplegable:hover > .submenu,
+.nav-corporativo-dinamico
+.menu-desplegable:focus-within > .submenu {
+    display: flex;
+}
+
+/* Enlaces de los submenús */
+.nav-corporativo-dinamico .submenu li {
+    width: 100%;
+    margin: 0;
+}
+
+.nav-corporativo-dinamico .submenu a {
+    display: block;
+    padding: 12px 20px;
+    text-align: left;
+    white-space: normal;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .nav-corporativo-dinamico > ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .nav-corporativo-dinamico .menu-desplegable > .submenu {
+        position: static;
+        transform: none;
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+        margin-top: 5px;
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+}
+
 
