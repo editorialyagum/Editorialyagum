@@ -348,36 +348,91 @@ ul {
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   10. HEADER: ENCABEZADO DE EDITORIAL YAGUM
-   ========================================================================== */
 
+/* ==========================================================================
+10. HEADER: ENCABEZADO CON LOGO AL LADO (Estilo Penguin)
+========================================================================== */
 .header-corporativo-dinamico {
     background-color: var(--bg-dark);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-family: var(--font-base);
-    padding: 30px 0 20px;
-    text-align: center;
+    padding: 25px 0;
 }
 
-.header-branding h1 {
-    border-bottom: none;
+/* Contenedor Flex que alinea todo horizontalmente al centro */
+.header-branding-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre el logo, la línea y el texto */
+}
+
+/* 🐼 NUEVA CLASE: Óvalo temporal para el Panda Rojo */
+.logo-temporal-panda {
+    width: 50px;       /* Más alto que ancho, imitando un óvalo */
+    height: 70px;
+    background-color: #d75a34; /* Naranja terracota/óxido elegante */
+    border-radius: 50%; /* Al no ser un cuadrado perfecto, se hace un óvalo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;  /* Tamaño del emoji del panda */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Control del tamaño de tu imagen de logo (Déjala lista para el futuro) */
+.header-logo-img {
+    height: 70px; 
+    width: auto;
+    display: block;
+}
+
+/* La línea vertical idéntica a la de la imagen */
+.divisor-vertical {
+    width: 1px;
+    height: 60px; /* Altura de la línea */
+    background-color: rgba(255, 255, 255, 0.2); /* Color blanco sutil con opacidad */
+}
+
+/* Contenedor de textos alineados a la izquierda */
+.header-text-wrapper {
+    text-align: left;
+}
+
+.header-text-wrapper h1 {
+    border-bottom: none; /* Quitamos la línea de abajo para usar la vertical */
     color: var(--text-main);
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: 2px;
-    margin-bottom: 5px;
-    margin-top: 0;
+    margin: 0;
     padding-bottom: 0;
+    line-height: 1.1;
 }
 
-.header-branding p {
+.header-text-wrapper p {
     color: var(--accent);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-style: italic;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    margin-top: 5px;
 }
+
+/* Adaptación para pantallas de celulares pequeños */
+@media (max-width: 480px) {
+    .header-branding-flex {
+        flex-direction: column; /* Se apila verticalmente en pantallas muy chicas */
+        gap: 10px;
+    }
+    .divisor-vertical {
+        width: 40px;
+        height: 1px; /* La línea se vuelve horizontal en celular */
+    }
+    .header-text-wrapper {
+        text-align: center;
+    }
+}
+
 
 /* ==========================================================================
    11. HEADER: NAVEGACIÓN PRINCIPAL
