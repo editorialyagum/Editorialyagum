@@ -598,12 +598,12 @@ ul {
     transform: translateY(-2px);
 }
 .btn-faq1 {
-    background-color: #1a2e3b;
+    background-color: #848687;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-faq1:hover {
-    background-color: #243f51;
+    background-color: #acaeb0;
     transform: translateY(-2px);
 }
 /* ==========================================================================
