@@ -523,26 +523,106 @@ ul {
     color: #ffffff;
 }
 
-.btn-literario {
+.btn-catalogoliterario {
     background-color: #a33b3b;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-literario:hover {
+.btn-catalogoliterario:hover {
     background-color: #be4d4d;
     transform: translateY(-2px);
 }
 
-.btn-academico {
+.btn-catalogoacademico {
     background-color: #1e293b;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-academico:hover {
+.btn-catalogoacademico:hover {
     background-color: #334155;
     transform: translateY(-2px);
 }
+.btn-convocatorialiteraria {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.btn-convocatorialiteraria:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-convocatoriaacademiva {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-convocatoriaacademica:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-lineamientosliterarios {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-lineamientosliterarios:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-lineamientosacademicos {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-lineamientosacademicos:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-selloyguni {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-selloyguni:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-sellolumiere {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-sellolumiere:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-selloxipngwei {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-selloxipngwei:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-sellodomdali {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-sellodomdali:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
+.btn-faq1 {
+    background-color: #a33b3b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-faq1:hover {
+    background-color: #be4d4d;
+    transform: translateY(-2px);
+}
 /* ==========================================================================
    14. FOOTER: PIE DE PÁGINA
    ========================================================================== */
