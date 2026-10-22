@@ -577,10 +577,7 @@ ul {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-selloyguni:hover {
-    background-color: #d4af37;
-    transform: translateY(-2px);
-}
+
 .btn-sellolumiere {
     background-color: #722f52;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -590,15 +587,7 @@ ul {
     background-color: #8c3b64;
     transform: translateY(-2px);
 }
-.btn-selloxiongwei {
-    background-color: #dbb468;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.btn-selloxiongwei:hover {
-    background-color: #e5c583;
-    transform: translateY(-2px);
-}
 .btn-sellodomdali {
     background-color: #8c7853;
     border: 1px solid rgba(255, 255, 255, 0.1);
