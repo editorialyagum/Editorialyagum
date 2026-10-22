@@ -543,84 +543,85 @@ ul {
     transform: translateY(-2px);
 }
 .btn-convocatorialiteraria {
-    background-color: #a33b3b;
+    background-color: #B026FF;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-convocatorialiteraria:hover {
-    background-color: #be4d4d;
+    background-color: #cc73ff;
     transform: translateY(-2px);
 }
 .btn-convocatoriaacademiva {
-    background-color: #a33b3b;
+    background-color: #A68A70;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-convocatoriaacademica:hover {
-    background-color: #be4d4d;
+    background-color: #c2b09e;
     transform: translateY(-2px);
 }
 .btn-lineamientosliterarios {
-    background-color: #a33b3b;
+    background-color: #343A40;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-lineamientosliterarios:hover {
-    background-color: #be4d4d;
+    background-color: #495057;
     transform: translateY(-2px);
 }
+
 .btn-lineamientosacademicos {
-    background-color: #a33b3b;
+    background-color: #1b4332;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-lineamientosacademicos:hover {
-    background-color: #be4d4d;
+    background-color: #2d6a4f;
     transform: translateY(-2px);
 }
 .btn-selloyguni {
-    background-color: #a33b3b;
+    background-color: #c29b38;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-selloyguni:hover {
-    background-color: #be4d4d;
+    background-color: #d4af37;
     transform: translateY(-2px);
 }
 .btn-sellolumiere {
-    background-color: #a33b3b;
+    background-color: #dd7a52;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-sellolumiere:hover {
-    background-color: #be4d4d;
+    background-color: #e68c65;
     transform: translateY(-2px);
 }
 .btn-selloxipngwei {
-    background-color: #a33b3b;
+    background-color: #dbb468;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-selloxipngwei:hover {
-    background-color: #be4d4d;
+    background-color: #e5c583;
     transform: translateY(-2px);
 }
 .btn-sellodomdali {
-    background-color: #a33b3b;
+    background-color: #8c7853;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-sellodomdali:hover {
-    background-color: #be4d4d;
+    background-color: #a38c62;
     transform: translateY(-2px);
 }
 .btn-faq1 {
-    background-color: #a33b3b;
+    background-color: #1a2e3b;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-faq1:hover {
-    background-color: #be4d4d;
+    background-color: #243f51;
     transform: translateY(-2px);
 }
 /* ==========================================================================
