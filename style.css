@@ -543,12 +543,12 @@ ul {
     transform: translateY(-2px);
 }
 .btn-convocatorialiteraria {
-    background-color: #B026FF;
+    background-color: #722f52;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-convocatorialiteraria:hover {
-    background-color: #cc73ff;
+    background-color: #8c3b64;
     transform: translateY(-2px);
 }
 .btn-convocatoriaacademiva {
