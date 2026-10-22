@@ -523,34 +523,26 @@ ul {
     color: #ffffff;
 }
 
-.btn-catalogoliterario {
+.btn-literario {
     background-color: #a33b3b;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-catalogoliterario:hover {
+.btn-literario:hover {
     background-color: #be4d4d;
     transform: translateY(-2px);
 }
 
-.btn-catalogoacademico {
+.btn-academico {
     background-color: #1e293b;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-catalogoacademico:hover {
+.btn-academico:hover {
     background-color: #334155;
     transform: translateY(-2px);
 }
-.btn-convocatorialiteraria {
-    background-color: #722f52;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.btn-convocatorialiteraria:hover {
-    background-color: #8c3b64;
-    transform: translateY(-2px);
-}
 .btn-convocatoriaacademica {
     background-color: #c2b09e;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -589,12 +581,12 @@ ul {
     transform: translateY(-2px);
 }
 .btn-sellolumiere {
-    background-color: #dd7a52;
+    background-color: #722f52;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-sellolumiere:hover {
-    background-color: #e68c65;
+    background-color: #8c3b64;
     transform: translateY(-2px);
 }
 .btn-selloxiongwei {
