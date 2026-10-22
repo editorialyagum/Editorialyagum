@@ -366,36 +366,9 @@ ul {
     gap: 20px; /* Espacio entre el logo, la línea y el texto */
 }
 
-/* 🐼 NUEVA CLASE: Óvalo temporal para el Panda Rojo */
-.logo-temporal-panda {
-    width: 50px;       /* Más alto que ancho, imitando un óvalo */
-    height: 70px;
-    background-color: #d75a34; /* Naranja terracota/óxido elegante */
-    border-radius: 50%; /* Al no ser un cuadrado perfecto, se hace un óvalo */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;  /* Tamaño del emoji del panda */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Control del tamaño de tu imagen de logo (Déjala lista para el futuro) */
-.header-logo-img {
-    height: 70px; 
-    width: auto;
-    display: block;
-}
-
-/* La línea vertical idéntica a la de la imagen */
-.divisor-vertical {
-    width: 1px;
-    height: 60px; /* Altura de la línea */
-    background-color: rgba(255, 255, 255, 0.2); /* Color blanco sutil con opacidad */
-}
-
 /* Contenedor de textos alineados a la izquierda */
 .header-text-wrapper {
-    text-align: left;
+    text-align: center;
 }
 
 .header-text-wrapper h1 {
