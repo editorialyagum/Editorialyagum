@@ -552,12 +552,12 @@ ul {
     transform: translateY(-2px);
 }
 .btn-convocatoriaacademiva {
-    background-color: #A68A70;
+    background-color: #c2b09e;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-convocatoriaacademica:hover {
-    background-color: #c2b09e;
+    background-color: #A68A70;
     transform: translateY(-2px);
 }
 .btn-lineamientosliterarios {
@@ -597,12 +597,12 @@ ul {
     background-color: #e68c65;
     transform: translateY(-2px);
 }
-.btn-selloxipngwei {
+.btn-selloxiongwei {
     background-color: #dbb468;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-selloxipngwei:hover {
+.btn-selloxiongwei:hover {
     background-color: #e5c583;
     transform: translateY(-2px);
 }
