@@ -1,39 +1,58 @@
-## Hi there 👋
-
-<!--
-**editorialyagum/Editorialyagum** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-Plantilla de páginas nuevas
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cambia este título según la página (ej: Catálogo Académico | Editorial Yagum) -->
     <title>Nombre de la Página | Editorial Yagum</title>
-    
-    <!-- CONEXIÓN AL CSS GENERAL -->
-    <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./style.css" -->
-    <!-- NOTA: Si el archivo está DENTRO de una carpeta (como lectores/), usa "../style.css" -->
     <link rel="stylesheet" href="./style.css">
-    
-    <!-- Tipografía corporativa -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header-corporativo-dinamico">
+    <div class="container">
+        <div class="header-branding-flex">     
+            <div class="header-text-wrapper">
+                <h2>Editorial Yagum</h2>
+                <p>Transformando historias en legados</p>
+            </div>
+        </div>
+    </div>
+<nav class="nav-corporativo-dinamico" aria-label="Navegación principal">
+<ul>
+<li> <a href="/Editorialyagum/index.html">Inicio</a></li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Lectores ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/catalogos/libros_literarios.html">Catálogo Literario</a></li>
+        <li><a href="/Editorialyagum/catalogos/libros_academicos.html">Catálogo Académico</a></li>
+    </ul>
+</li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Autores ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/catalogos/autores_literarios.html">Autores literarios</a></li>
+        <li><a href="/Editorialyagum/catalogos/autores_academicos.html">Autores académicos</a></li>
+    </ul>
+</li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Escritores ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/escritores/convocatoria_literaria.html">Convocatoria literaria</a></li>
+        <li><a href="/Editorialyagum/escritores/convocatoria_academica.html">Convocatoria académica</a></li>
+    </ul>
+</li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Nosotros ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/nosotros/nosotros.html">Nuestro equipo</a></li>
+        <li><a href="/Editorialyagum/nosotros/alcance.html">Nuestro alcance</a></li>
+        <li><a href="/Editorialyagum/nosotros/politicas.html">Políticas</a></li>
+        <li><a href="/Editorialyagum/nosotros/terminos.html">Términos y condiciones</a></li>
+    </ul>
+</li>
+<li><a href="/Editorialyagum/contacto.html">Contacto</a>
+</li>
+</ul>
+</nav>
+</header>
     <!-- El script inyectará aquí de forma automática el menú superior con sus submenús -->
     <div id="header-corporativo"></div>
 
