@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Cambia este título según la página (ej: Catálogo Académico | Editorial Yagum) -->
-    <title>Nombre de la Página | Editorial Yagum</title>
+    <title>FAQs | Editorial Yagum</title>
     
     <!-- CONEXIÓN AL CSS GENERAL -->
     <!-- NOTA: Si el archivo está SUELTO en la raíz, usa "./style.css" -->
@@ -17,8 +17,49 @@
     <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- El script inyectará aquí de forma automática el menú superior con sus submenús -->
-    <div id="header-corporativo"></div>
+<header class="header-corporativo-dinamico">
+    <div class="container">
+        <div class="header-branding-flex">     
+            <div class="header-text-wrapper">
+                <h2>Editorial Yagum</h2>
+                <p>Transformando historias en legados</p>
+            </div>
+        </div>
+    </div>
+<nav class="nav-corporativo-dinamico" aria-label="Navegación principal">
+<ul>
+<li> <a href="/Editorialyagum/index.html">Inicio</a></li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Lectores ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/catalogos/libros_literarios.html">Catálogo Literario</a></li>
+        <li><a href="/Editorialyagum/catalogos/libros_academicos.html">Catálogo Académico</a></li>
+    </ul>
+</li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Autores ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/catalogos/autores_literarios.html">Autores literarios</a></li>
+        <li><a href="/Editorialyagum/catalogos/autores_academicos.html">Autores académicos</a></li>
+    </ul>
+</li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Escritores ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/escritores/convocatoria_literaria.html">Convocatoria literaria</a></li>
+        <li><a href="/Editorialyagum/escritores/convocatoria_academica.html">Convocatoria académica</a></li>
+    </ul>
+</li>
+<li class="menu-desplegable"><a href="#" class="trigger-desplegable">Nosotros ▾</a>
+    <ul class="submenu">
+        <li><a href="/Editorialyagum/nosotros/nosotros.html">Nuestro equipo</a></li>
+        <li><a href="/Editorialyagum/nosotros/alcance.html">Nuestro alcance</a></li>
+        <li><a href="/Editorialyagum/nosotros/politicas.html">Políticas</a></li>
+        <li><a href="/Editorialyagum/nosotros/terminos.html">Términos y condiciones</a></li>
+    </ul>
+</li>
+<li><a href="/Editorialyagum/contacto.html">Contacto</a>
+</li>
+</ul>
+</nav>
+</header>
 
     <!-- CUERPO PRINCIPAL DE LA PÁGINA (Aquí va tu contenido exclusivo) -->
     <main class="container" style="padding-top: 40px;">
