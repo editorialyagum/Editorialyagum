@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
 
+<!-- Ejemplo de cómo cambiaría la página principal -->
+<url>
+  <loc>https://tu-nuevo-dominio.com</loc>
+  <priority>1.00</priority>
+</url>
+
+
+
+  
   <!-- Página Principal -->
   <url>
     <loc>https://editorialyagum.github.io/Editorialyagum/index.html</loc>
