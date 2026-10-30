@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+
+  <!-- Página Principal -->
+  <url>
+    <loc>https://editorialyagum.github.io/Editorialyagum/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Lectores & Catálogos -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Autores -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Escritores & Convocatorias -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- La Editorial / Nosotros -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Información Legal -->
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://github.io</loc>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
