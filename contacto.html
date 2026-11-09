@@ -80,18 +80,52 @@
     <main class="contenedor-contacto">
         <h1 class="titulo-seccion">Contacto Editorial</h1>
         <p>Toda comunicacion se apega a las politicas pertienntes y los tiempso amrcados dependeidno el caso.</p>
+  <!-- El atributo 'netlify' activa el servidor automático de Netlify de forma invisible -->
+        <form name="contacto-editorial" method="POST" netlify>
+            
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            </div>
+             <div class="grupo-formulario">
+                <label for="correo">Correo Electrónico de Contacto:</label>
+                <input type="email" id="correo" name="correo" placeholder="autor@ejemplo.com" required>
+            </div>
 
-        <!-- Reemplaza todo tu formulario antiguo por este bloque -->
-<div style="width: 100%; max-width: 600px; margin: 0 auto;">
-    <iframe 
-        src="https://forms.gle/3Q6qEzrpKc5WC6BM9" 
-        width="100%" 
-        height="900" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0">
-        Cargando…
-    </iframe>
+            <div class="grupo-formulario">
+                <label for="asunto">Motivo de tu Mensaje:</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="convocatoria">Convocatoria</option>
+                    <option value="empresas">Empresas</option>
+                    <option value="prensa">Prensa</option>
+                    <option value="instituciones">Instituciones</option>
+                </select>
+            </div>
+              <div class="grupo-formulario">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí..." required></textarea>
+            </div>
+             <!-- BLOQUE LEGAL OBLIGATORIO (MÉXICO - LFPDPPP) -->
+            <div class="seccion-legal">
+                <!-- Checkbox 1: Privacidad de datos (Requisito del INAI) -->
+                <label class="casilla-legal">
+                    <input type="checkbox" id="acepta_privacidad" name="acepta_privacidad" required>
+                    <span class="texto-legal">
+                        Consiento el tratamiento de mis datos personales conforme al <a href="privacidad.html" target="_blank">Aviso de Privacidad</a> de Editorial Yagum.
+                    </span>
+                </label>
+                 <!-- Checkbox 2: Términos del negocio editorial -->
+                <label class="casilla-legal">
+                    <input type="checkbox" id="acepta_bases" name="acepta_bases" required>
+                    <span class="texto-legal">
+                        He leído, entiendo y acepto las <a href="bases.html" target="_blank">Bases de la Convocatoria y Términos Editoriales</a> (incluyendo los criterios de evaluación, propiedad intelectual y el programa de internacionalización).
+                    </span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
 
     
 </div>
