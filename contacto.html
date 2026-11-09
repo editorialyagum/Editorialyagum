@@ -59,6 +59,11 @@
             cursor: pointer; font-size: 1.1rem; font-weight: bold; width: 100%; transition: background 0.3s;
         }
         .btn-enviar:hover { background-color: #2a4365 !important; }
+        iframe {
+            border: 0;
+            margin: 0;
+            width: 100%;
+        }
     </style>
     <!-- Cambia este título según la página (ej: Catálogo Académico | Editorial Yagum) -->
     <title>Nombre de la Página | Editorial Yagum</title>
@@ -130,14 +135,32 @@
     
 </div>
 
-<div class="contenedor-tally">
-        <!-- Código de inserción estándar de Tally -->
+ <div class="contenedor-tally">
+        <!-- Formulario con el script de ajuste automático de Tally -->
         <iframe 
-            src="https://tally.so/r/WJrkJj" 
+            src="https://tally.so" 
+            loading="lazy" 
+            width="100%" 
+            height="500" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
             title="Prueba 8 nov beta"
-            crossorigin="anonymous">
+            style="overflow:hidden; height:100%; width:100%;">
             Cargando…
-         iframe>
+        </iframe>
+        <script>
+            // Este script oficial lee el tamaño interno de Tally y estira el iframe eliminando el scroll vertical
+            window.addEventListener('message', (e) => {
+                if (e.data && e.data.includes('tally-embed:change-height')) {
+                    const data = JSON.parse(e.data);
+                    const iframe = document.querySelector('iframe[title="Prueba 8 nov beta"]');
+                    if (iframe) {
+                        iframe.style.height = data.payload + 'px';
+                    }
+                }
+            });
+        </script>
     </div>
 
         
