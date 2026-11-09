@@ -64,6 +64,10 @@
             margin: 0;
             width: 100%;
         }
+        .contenedor-tally iframe {
+            border: none !important;
+            overflow: hidden !important;
+        }
     </style>
     <!-- Cambia este título según la página (ej: Catálogo Académico | Editorial Yagum) -->
     <title>Contacto | Editorial Yagum</title>
@@ -149,6 +153,7 @@
             style="overflow:hidden; height:100%; width:100%;">
             Cargando…
         </iframe>
+      <script src="https://tally.so"></script>
         <script>
             // Este script oficial lee el tamaño interno de Tally y estira el iframe eliminando el scroll vertical
             window.addEventListener('message', (e) => {
